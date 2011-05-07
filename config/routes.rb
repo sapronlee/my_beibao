@@ -1,5 +1,10 @@
 ChinaBeiBao::Application.routes.draw do
-  devise_for :admins
+  devise_for :admins,
+    :controllers => { :sessions => 'admins/sessions' }
+    
+  namespace :admin do
+    root :to => 'home#index'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

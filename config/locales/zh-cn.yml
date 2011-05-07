@@ -169,6 +169,12 @@ zh-cn:
         even: "必须为双数"
         taken: "已经被使用"
         record_invalid: "校验失败: %{errors}"
+    model:
+      admin: "管理员"
+    attributes:
+      admin:
+        email: "邮箱"
+        password: "密码"
 
   activemodel:
     errors:
@@ -208,3 +214,5 @@ zh-cn:
       create: "新增%{model}"
       update: "更新%{model}"
       submit: "储存%{model}"
+      admin:
+        create: "登录"
