@@ -4,6 +4,7 @@ ChinaBeiBao::Application.routes.draw do
     
   namespace :admin do
     root :to => 'home#index'
+    resources :companies
   end
 
   # The priority is based upon order of creation:
