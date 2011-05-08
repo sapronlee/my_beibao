@@ -3,13 +3,13 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title><%= yield :title %></title>
-    <%= stylesheet_link_tag "reset", "admin/application" %>
-    <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag "reset", "wice_grid", "admin/application" %>
+    <%= javascript_include_tag :admin %>
     <%= csrf_meta_tag %>
   </head>
   <body class="<%= "#{controller_name}_#{action_name}" %>">
     <div id="header">
-      <h1>中国背包网</h1>
+      <h1><%= Setting.site_name %></h1>
       <div class="navigation">
         <div id="header_top_wrapper">
           <span class="email"><%= current_admin.email %></span>
@@ -25,6 +25,7 @@
     </div>
     <div id="wrapper">
       <div id="screen_body" class="container">
+        <%= flash_messages %>
         <table class="layout">
           <tr>
             <td class="<%= content_for?(:sidebar) ? "left" : "full" %>">

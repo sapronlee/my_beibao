@@ -31,7 +31,7 @@ module ChinaBeiBao
     config.i18n.default_locale = 'zh-cn'
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w()
+    config.action_view.javascript_expansions[:admin] = %w(ckeditor/swfupload/jquery-1.5.1.min ckeditor/swfupload/rails wice_grid application)
     config.action_view.stylesheet_expansions[:defaults] = %w(reset jquery-ui application)
 
     # Configure the default encoding used in templates for Ruby 1.9.

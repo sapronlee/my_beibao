@@ -1,0 +1,13 @@
+<% title "公司" %>
+<%= render "base" %>
+<% content_for :page_header do -%>
+  <h1>公司列表</h1>
+<% end -%>
+<%= grid(@companies) do |g|
+  g.column :column_name => "名称", :attribute_name => "name"
+  g.column :column_name => "联系人", :attribute_name => "linkman"
+  g.column :column_name => "电话", :attribute_name => "tel"
+  g.column :td_html_attrs => { :class => "actions" } do |company|
+    raw "#{link_to("编辑", edit_admin_company_path(company))} | #{link_to("删除", admin_company_path(company), :method => :delete)}"
+  end
+end -%>

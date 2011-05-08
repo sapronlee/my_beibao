@@ -1,0 +1,28 @@
+<%= simple_form_for([:admin, @company], :html => { :multipart => true }) do |f| -%>
+  <%= f.error_messages %>
+  <div id="post_form_container">
+    <div class="main_attributes">
+      <div class="inner">
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :summary %>
+        <%= f.input :body %>
+        <%= f.input :tel %>
+        <%= f.input :linkman %>
+        <%= f.input :qq %>
+        <%= f.input :msn %>
+      </div>
+    </div>
+  </div>
+  <div id="other_container">
+    <%= f.input :cover %>
+    <% if @company.cover.blank? %>
+      <div class="cover_prview">
+        <%= image_tag @company.cover %>
+      </div>
+    <% end -%>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end -%>

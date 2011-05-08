@@ -6,6 +6,7 @@ a:hover { color: #fff; text-decoration: none; }
 /* flash message styles */
 #flash_message { border: 1px solid #ccc; padding: 5px 5px 5px 30px; margin-bottom: 12px; }
 #flash_message.alert { border-color: #c99; color: #fff; background: #c00 url(/images/chinabeibao_sprites.png) -473px -7px no-repeat; }
+#flash_message.notice { border-color: #9c9; color: #060; background: #e2f9e3 url(/images/chinabeibao_sprites.png) -475px -271px no-repeat; }
 
 /* button styles */
 .button { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; 
@@ -28,6 +29,16 @@ a.button { color: #404040; text-decoration: none; margin: 0; }
 .button:focus, .button:active, .button.checked { text-shadow: 0 1px 0 #666; top: 0px; background-position: 0 -25px; color: #fff;
   border: 1px solid #555; background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#999));
   background: -moz-linear-gradient(top,  #666,  #999); }
+  
+/* sidebar button styles */
+div.button_to_add_new { margin: 0 0 15px 0; }
+div.button_layout { overflow: hidden; margin-left: -1px; margin-top: -1px; padding: 1px; }
+div.button_layout a { display: block; font-size: 13px; font-weight: bold; height: 31px; margin-right: .4em; padding: 0 0 0 30px; text-decoration: none; text-shadow: 0 0 1px #fff; text-wrap: none; 
+  background: url(/images/chinabeibao_sprites.png) 0% -966px no-repeat; float: left; }
+div.button_layout a span { color: #000; display: block; padding: 1px 12px 2px 0; line-height: 29px; background: url(/images/chinabeibao_sprites.png) 100% -1030px no-repeat; }
+div.mbox { margin-top: 7px; }
+div.mbox h3 { padding: 6px 8px; font-size: 13px; margin: 0 0 5px 0; padding-bottom: 0; font-weight: bold; }
+div.mbox div.indent { padding-left: 8px; }
 
 /* header styles */
 #header { background: #195d00; position: relative; }
@@ -58,16 +69,34 @@ a.button { color: #404040; text-decoration: none; margin: 0; }
   -webkit-box-shadow: 3px 3px 4px #bbb; box-shadow: 3px 3px 4px #bbb; border-right: 1px solid #BBB; border-bottom: 1px solid #BBB; }
 #wrapper div.right .col { min-width: 200px; padding: 0 0 0 9px; }
 body:first-of-type .left .col, body:first-of-type .full .col { border: none; margin-right: 8px; }
-#wrapper div.left div.innercol, #wrapper div.full div.innercol { padding: 15px 28px 20px 23px; }
-
-#wrapper div.page_header { background: #edf3fe; margin: 0 0 5px 0; padding: 13px 30px 13px 24px; }
-#wrapper div.page_header h1 { padding: 0; margin: 0; font-size: 14px; color: #000; font-weight: bold; line-height: normal; }
-
-
+#wrapper div.left div.innercol, #wrapper div.full div.innercol { padding: 15px 23px 20px 23px; }
+#wrapper div.page_header { background: #edf3fe; margin: 0 0 5px 0; padding: 13px 30px 13px 24px; line-height: normal; }
+#wrapper div.page_header h1, #wrapper div.page_header strong { padding: 0; margin: 0; font-size: 14px; color: #000; font-weight: bold; line-height: normal; }
+#wrapper div.page_header a:link, #wrapper div.page_header a:visited { line-height: normal; }
+#wrapper div.page_header span.pipe { opacity: .6; filter: alpha(opacity=60); font-size: 10px; padding: 0 4px; }
 #wrapper div.bottom { line-height: 14px; }
 #wrapper div.footer { font-size: 9px; color: #999; margin: 3px 0 20px 10px; padding-bottom: 15px; }
 #wrapper div.footer a:link, #wrapper div.footer a:visited { color: #195D00; }
 #wrapper div.footer a:hover { color: #fff; background: #195d00; }
+
+/* form styles */
+.simple_form div.main_attributes { background: #efefef; margin: 0 0 10px 0; border-width: 1px; border-style: solid; border-color: #d9d9d9 #ccc #ccc #d9d9d9; } 
+.simple_form div.main_attributes div.inner { padding: 10px; border: 1px solid #fff; }
+.simple_form div.input { margin: 0 15px 10px 0; }
+.simple_form div.input label { display: block; color: #333; }
+.simple_form div.input abbr { color: #bf0000; }
+.simple_form div.input input { width: 100%; padding: 3px; font-size: 18px; }
+.simple_form div.input textarea { width: 100%; font-family: 'Lucida Grande', Verdana, Arial, "\5b8b\4f53", Sans-Serif; height: 100px; padding: 3px; margin: 2px; overflow-y:auto; }
+.simple_form div.input input.file { font-size: 12px; }
+.simple_form div#other_container { border-bottom: 5px solid #eee; padding: 8px 0 8px 10px; }
+.simple_form div.actions { padding-top: 10px; }
+
+/* error messages styles */
+div.errorExplanation { border: 1px solid #c99; padding: 5px 5px 5px 30px; margin-bottom: 12px; color: #fff; background: #c00 url(/images/chinabeibao_sprites.png) -473px -6px no-repeat; }
+div.errorExplanation h2 { font-size: 14px; font-weight: bold; }
+div.errorExplanation p { font-weight: bold; }
+div.errorExplanation ul { padding-left: 20px; }
+div.errorExplanation li { list-style-type: square; padding: 2px; }
 
 /* login page styles */
 body#login { color: #333; background: #e5e5e5; padding: 55px 0; }
@@ -82,5 +111,5 @@ body#login label { display: block; font-weight: bold; color: #666; }
 body#login input.string, 
 body#login input.password { width: 400px; border: 1px solid #DDD; border-left-color: #999; border-top-color: #999;
   padding: 7px 4px; line-height: 16px; background: #fff; }
-body#login input.boolean { vertical-align: middle; }
+body#login input.boolean { vertical-align: middle; width: auto; }
 body#login label.boolean { display: inline-block; vertical-align: middle; line-height: 13px; }

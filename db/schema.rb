@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110507075738) do
+ActiveRecord::Schema.define(:version => 20110508112033) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -38,18 +38,32 @@ ActiveRecord::Schema.define(:version => 20110507075738) do
   end
 
   create_table "companies", :force => true do |t|
-    t.string   "name",            :null => false
-    t.string   "tel",             :null => false
+    t.string   "name",               :null => false
+    t.string   "tel",                :null => false
     t.string   "qq"
     t.string   "msn"
-    t.string   "address",         :null => false
-    t.string   "linkman",         :null => false
-    t.string   "summary"
-    t.string   "body",            :null => false
+    t.string   "address",            :null => false
+    t.string   "linkman",            :null => false
+    t.text     "summary"
+    t.text     "body",               :null => false
     t.string   "cover_file_name"
+    t.integer  "cover_file_size"
+    t.string   "cover_content_type"
+    t.datetime "cover_updated_at"
     t.string   "web_site"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "settings", :force => true do |t|
+    t.string   "var",                      :null => false
+    t.text     "value"
+    t.integer  "thing_id"
+    t.string   "thing_type", :limit => 30
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "settings", ["thing_type", "thing_id", "var"], :name => "index_settings_on_thing_type_and_thing_id_and_var", :unique => true
 
 end

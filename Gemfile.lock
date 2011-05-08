@@ -15,6 +15,13 @@ GIT
       mime-types (>= 1.16)
 
 GIT
+  remote: https://github.com/leikind/wice_grid.git
+  revision: 1f7830449088a69498950984da6c828870c7e4d4
+  branch: rails3
+  specs:
+    wice_grid (3.0.0.pre4)
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: 87b670787ad763392e2578d74176f7c75f33c0ee
   specs:
@@ -116,7 +123,6 @@ GEM
     tzinfo (0.3.27)
     warden (1.0.4)
       rack (>= 1.0)
-    wice_grid (3.0.0.pre2)
     will_paginate (3.0.pre2)
 
 PLATFORMS
@@ -138,5 +144,5 @@ DEPENDENCIES
   rails-footnotes (>= 3.7)
   rails-settings-cached
   simple_form!
-  wice_grid (= 3.0.0.pre2)
+  wice_grid!
   will_paginate (~> 3.0.beta)

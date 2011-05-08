@@ -1,0 +1,17 @@
+<% content_for :sidebar do -%>
+  <% if ["index"].index(action_name) -%>
+  <div class="button_to_add_new">
+    <div class="button_layout">
+      <a href="<%= new_admin_company_path %>"><span>添加新的公司</span></a>
+    </div>
+  </div>
+  <% end -%>
+  <% if ["new", "create"].index(action_name) -%>
+    <div class="mbox">
+      <h3>添加一个新的公司</h3>
+      <div class="indent">
+        <p>你可以在这里添加一个新的公司，稍后你才可以添加其他内容，比如旅游线路，专题等。</p>
+      </div>
+    </div>
+  <% end -%>
+<% end -%>

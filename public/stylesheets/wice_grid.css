@@ -54,6 +54,7 @@
 .wice_grid th {    
   padding: 8px 6px;
   color:#666;
+  text-align: left;
 }
 .wice_grid th a { 
   color: #666;

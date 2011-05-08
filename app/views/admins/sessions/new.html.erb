@@ -2,14 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title></title>
+    <title>登录</title>
     <%= stylesheet_link_tag "reset", "admin/application" %>
-    <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
   </head>
   <body id="login">
     <div class="login">
-      <h1>中国背包网</h1>
+      <h1><%= Setting.site_name %></h1>
       <%= flash_messages %>
       <div id="login_dialog" class="login_dialog">
         <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>

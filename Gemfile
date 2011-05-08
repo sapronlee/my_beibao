@@ -6,7 +6,7 @@ gem 'devise'
 gem 'mongrel', '~> 1.2.0.pre', :group => :development
 gem 'will_paginate', '~> 3.0.beta'
 gem 'simple_form', :git => 'https://github.com/plataformatec/simple_form.git'
-gem 'wice_grid', '3.0.0.pre2'
+gem 'wice_grid', :git => 'https://github.com/leikind/wice_grid.git', :branch => 'rails3'
 gem 'paperclip', '~> 2.3'
 gem 'jquery-rails', :git => 'https://github.com/benmoss/jquery-rails.git'
 gem 'rails-settings-cached', :require => 'rails-settings'
