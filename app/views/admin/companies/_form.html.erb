@@ -1,3 +1,4 @@
+<%= javascript_include_tag :ckeditor %>
 <%= simple_form_for([:admin, @company], :html => { :multipart => true }) do |f| -%>
   <%= f.error_messages %>
   <div id="post_form_container">
@@ -6,7 +7,7 @@
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :summary %>
-        <%= f.input :body %>
+        <%= f.ckeditor :body, :input_html => { :height => 300, :toolbar=>'Full' } %>
         <%= f.input :tel %>
         <%= f.input :linkman %>
         <%= f.input :qq %>

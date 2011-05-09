@@ -1,0 +1,12 @@
+zh-cn:
+  ckeditor:
+    page_title: "CKEditor管理页面"
+    upload_files: "上传新文件"
+    buttons:
+      cancel: "取消"
+      refresh:
+        title: "刷新"
+        hint: "刷新页面"
+      upload:
+        title: "上传"
+        hint: "上传新文件"

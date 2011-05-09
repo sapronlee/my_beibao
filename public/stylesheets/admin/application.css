@@ -37,8 +37,12 @@ div.button_layout a { display: block; font-size: 13px; font-weight: bold; height
   background: url(/images/chinabeibao_sprites.png) 0% -966px no-repeat; float: left; }
 div.button_layout a span { color: #000; display: block; padding: 1px 12px 2px 0; line-height: 29px; background: url(/images/chinabeibao_sprites.png) 100% -1030px no-repeat; }
 div.mbox { margin-top: 7px; }
-div.mbox h3 { padding: 6px 8px; font-size: 13px; margin: 0 0 5px 0; padding-bottom: 0; font-weight: bold; }
+div.mbox h3 { padding: 6px 8px; font-size: 13px; margin: 0 0 5px 0; font-weight: bold; background: #edf3fe; border-bottom: 1px solid gainsboro; }
 div.mbox div.indent { padding-left: 8px; }
+div.mbox div.indent p { font-size: 12px; line-height: 1.3em; color: #222; margin: 12px 0; }
+div.mbox div.indent ul.nav li {  }
+div.mbox div.indent ul.nav li a { display: block; padding: 3px 0 3px 3px; }
+div.mbox div.indent ul.nav li a:hover { background: #f0f0f0; text-decoration: none; color: #03c; }
 
 /* header styles */
 #header { background: #195d00; position: relative; }

@@ -14,4 +14,22 @@
       </div>
     </div>
   <% end -%>
+  <% if ["edit", "update"].index(action_name) -%>
+    <div class="mbox">
+      <h3>修改现有的公司</h3>
+      <div class="indent">
+        <p>你可以修改现有的公司信息。</p>
+      </div>
+    </div>
+  <% end -%>
+  <% if ["edit", "create", "new", "update"].index(action_name) -%>
+    <div class="mbox">
+      <h3>站内导航</h3>
+      <div class="indent">
+        <ul class="nav">
+          <li><a href="<%= admin_companies_path %>"><span>返回公司列表</span></a></li>
+        </ul>
+      </div>
+    </div>
+  <% end -%>
 <% end -%>
