@@ -1,0 +1,30 @@
+<% content_for :sidebar do -%>
+  <% if ["index"].index(action_name) -%>
+  <div class="button_to_add_new">
+    <div class="button_layout">
+      <a href="<%= new_admin_area_path %>"><span>添加新的栏目</span></a>
+    </div>
+  </div>
+  <% end -%>
+  <% if ["new", "create", "edit", "update"].index(action_name) -%>
+    <div class="mbox">
+      <% if ["new", "create"].index(action_name) -%>
+        <h3>添加一个新的栏目</h3>
+      <% else -%>
+        <h3>编辑一个现有栏目</h3>
+      <% end -%>
+      <div class="indent">
+        <p>你可以在这里添加或修改一个栏目，如川藏，滇藏等。</p>
+        <p>别名主要用于url的友好，例如：川藏的别名可以为"cz"。</p>
+      </div>
+    </div>
+    <div class="mbox">
+      <h3>站内导航</h3>
+      <div class="indent">
+        <ul class="nav">
+          <li><a href="<%= admin_areas_path %>"><span>返回栏目列表</span></a></li>
+        </ul>
+      </div>
+    </div>
+  <% end -%>
+<% end -%>

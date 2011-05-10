@@ -10,15 +10,12 @@ zh-cn:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Some errors were found, please take a look:"
-    # Labels and hints examples
-    # labels:
-    #   password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail para efetuar o sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   username: 'User name to sign in.'
-    #   password: 'No special characters, please.'
+    hints:
+      area:
+        slug: "只能含有数字、字母、横线且不能以横线开头和结尾。"
+      topic:
+        area: "请选择你要发布的栏目"
+        rec_num: "只能是0到5之间的整数"
+        pop_num: "只能是0到5之间的整数"
+        pv: "必须大于等于0的整数"
 

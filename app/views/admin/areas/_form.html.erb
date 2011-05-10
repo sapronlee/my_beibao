@@ -1,0 +1,14 @@
+<%= simple_form_for([:admin, @area]) do |f| -%>
+  <%= f.error_messages %>
+  <div id="post_form_container">
+    <div class="main_attributes">
+      <div class="inner">
+        <%= f.input :name %>
+        <%= f.input :slug %>
+      </div>
+    </div>
+  </div>  
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end -%>

@@ -1,7 +1,7 @@
 /* common styles */
 html, body { font: 12px/1.5 'Lucida Grande', Verdana, Arial, "\5b8b\4f53", Sans-Serif; color: #333; background: #e5e5e5; min-width: 870px; }
 a:link, a:visited, a:active { color: #03c; text-decoration: underline; }
-a:hover { color: #fff; text-decoration: none; }
+a:hover { color: #bf0000; text-decoration: none; }
 
 /* flash message styles */
 #flash_message { border: 1px solid #ccc; padding: 5px 5px 5px 30px; margin-bottom: 12px; }
@@ -92,8 +92,11 @@ body:first-of-type .left .col, body:first-of-type .full .col { border: none; mar
 .simple_form div.input input { width: 100%; padding: 3px; font-size: 18px; }
 .simple_form div.input textarea { width: 100%; font-family: 'Lucida Grande', Verdana, Arial, "\5b8b\4f53", Sans-Serif; height: 100px; padding: 3px; margin: 2px; overflow-y:auto; }
 .simple_form div.input input.file { font-size: 12px; }
-.simple_form div#other_container { border-bottom: 5px solid #eee; padding: 8px 0 8px 10px; }
+.simple_form div.other_container { border-bottom: 5px solid #eee; padding: 8px 0 8px 10px; }
 .simple_form div.actions { padding-top: 10px; }
+.simple_form div.input span.hint { color: #666; margin-top: 3px; display: block; }
+.simple_form div.select select { padding: 3px 8px 3px 0; border: 1px solid #ccc; }
+.simple_form div.numeric input.numeric { width: 100px; }
 
 /* error messages styles */
 div.errorExplanation { border: 1px solid #c99; padding: 5px 5px 5px 30px; margin-bottom: 12px; color: #fff; background: #c00 url(/images/chinabeibao_sprites.png) -473px -6px no-repeat; }

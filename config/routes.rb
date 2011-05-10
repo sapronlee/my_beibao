@@ -6,7 +6,10 @@ ChinaBeiBao::Application.routes.draw do
   
   namespace :admin do
     root :to => 'home#index'
-    resources :companies
+    resources :companies do
+      resources :topics
+    end
+    resources :areas
   end
 
   # The priority is based upon order of creation:

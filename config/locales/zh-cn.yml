@@ -172,6 +172,8 @@ zh-cn:
     models:
       admin: "管理员"
       company: "公司"
+      area: "栏目"
+      topic: "专题"
     attributes:
       admin:
         email: "邮箱"
@@ -187,6 +189,23 @@ zh-cn:
         qq: "QQ"
         msn: "MSN"
         cover_file_size: "封面图大小"
+        cover_content_type: "封面图类型"
+        cover_file_name: "封面图"
+      area:
+        name: "名称"
+        slug: "别名"
+      topic:
+        title: "标题"
+        summary: "简介"
+        body: "内容"
+        cover: "封面图"
+        area: "栏目"
+        area_id: "栏目"
+        pv: "浏览量"
+        rec_num: "推荐指数"
+        pop_num: "人气指数"
+        cover_file_size: "封面图大小"
+        cover_file_name: "封面图"
         cover_content_type: "封面图类型"
 
   activemodel:

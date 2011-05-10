@@ -85,6 +85,7 @@
 .wice_grid tfoot tr td {
   border-bottom: 1px solid #ddd;
 }
+.wice_grid tfoot a:hover { color: #bf0000; }
 
 .wice_grid tr.odd {
   background-color: #fff;

@@ -1,0 +1,12 @@
+<% title "栏目" %>
+<%= render "base" %>
+<% content_for :page_header do -%>
+  <h1>栏目列表</h1>
+<% end -%>
+<%= grid(@areas) do |g|
+  g.column :column_name => "名称", :attribute_name => "name"
+  g.column :column_name => "别名", :attribute_name => "slug"
+  g.column :td_html_attrs => { :class => "actions" } do |area|
+    raw "#{link_to("编辑", edit_admin_area_path(area))} | #{link_to("删除", admin_area_path(area), :method => :delete)}"
+  end
+end -%>

@@ -3,16 +3,16 @@ development:
   # 配置图片的域名
   upload_url: "http://127.0.0.1:3000/uploads"
   # 上传途径
-  upload_root: "/home/chucklee/uploads"
+  upload_path: "/home/chucklee/works/ChinaBeiBao/public/uploads"
   
 test:  
   # 配置图片的域名
   upload_url: "http://127.0.0.1:3000/uploads"
   # 上传途径
-  upload_root: "/home/boli/work/ChuckLee-Blog/public/uploads"
+  upload_path: "/home/boli/work/ChuckLee-Blog/public/uploads"
   
 production:  
   # 配置图片的域名
   upload_url: "http://www.chucklee.cc/uploads"
   # 上传途径
-  upload_root: "/home/boli/work/ChuckLee-Blog/public/uploads"
+  upload_path: "/home/boli/work/ChuckLee-Blog/public/uploads"

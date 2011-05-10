@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509221921) do
+ActiveRecord::Schema.define(:version => 20110510160353) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -83,5 +83,25 @@ ActiveRecord::Schema.define(:version => 20110509221921) do
   end
 
   add_index "settings", ["thing_type", "thing_id", "var"], :name => "index_settings_on_thing_type_and_thing_id_and_var", :unique => true
+
+  create_table "topics", :force => true do |t|
+    t.string   "title",                             :null => false
+    t.integer  "area_id",                           :null => false
+    t.integer  "company_id",                        :null => false
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.integer  "pv",                 :default => 0
+    t.integer  "rec_num",            :default => 0
+    t.integer  "pop_num",            :default => 0
+    t.text     "summary"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "topics", ["area_id"], :name => "index_topics_on_area_id"
+  add_index "topics", ["company_id"], :name => "index_topics_on_company_id"
 
 end

@@ -1,5 +1,6 @@
 # coding : utf-8
 class Company < ActiveRecord::Base
+  has_many :topics, :dependent => :destroy
   
   # 验证
   validates_presence_of :name, :tel, :address, :linkman, :summary, :body
