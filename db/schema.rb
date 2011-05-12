@@ -10,9 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110510160353) do
+ActiveRecord::Schema.define(:version => 20110512154120) do
 
   create_table "admins", :force => true do |t|
+    t.string   "login"
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
@@ -36,6 +37,26 @@ ActiveRecord::Schema.define(:version => 20110510160353) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "articles", :force => true do |t|
+    t.string   "title",                             :null => false
+    t.string   "auther",                            :null => false
+    t.integer  "area_id",                           :null => false
+    t.integer  "company_id",                        :null => false
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.integer  "pv",                 :default => 0
+    t.integer  "status",             :default => 0
+    t.text     "summary"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "articles", ["area_id"], :name => "index_articles_on_area_id"
+  add_index "articles", ["company_id"], :name => "index_articles_on_company_id"
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                                 :null => false
@@ -72,6 +93,28 @@ ActiveRecord::Schema.define(:version => 20110510160353) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "routes", :force => true do |t|
+    t.string   "title",                             :null => false
+    t.integer  "area_id",                           :null => false
+    t.integer  "company_id",                        :null => false
+    t.text     "summary",                           :null => false
+    t.text     "journey",                           :null => false
+    t.text     "indemnify"
+    t.text     "notice"
+    t.string   "city"
+    t.string   "start_date"
+    t.integer  "pcount",             :default => 0
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "routes", ["area_id"], :name => "index_routes_on_area_id"
+  add_index "routes", ["company_id"], :name => "index_routes_on_company_id"
 
   create_table "settings", :force => true do |t|
     t.string   "var",                      :null => false

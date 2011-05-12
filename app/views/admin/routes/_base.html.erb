@@ -1,12 +1,12 @@
 <%= content_for :page_header do -%>
   <% if ["index"].index(action_name) -%>
-    <h1><%= @company.blank? ? "专题列表" : "#{@company.name}的专题列表" %></h1>
+    <h1><%= @company.blank? ? "线路列表" : "#{@company.name}的线路列表" %></h1>
   <% end -%>
   <% if ["new", "create"].index(action_name) -%>
-    <h1><%= @company.blank? ? "创建专题" : "创建#{@company.name}的专题" %></h1>
+    <h1><%= @company.blank? ? "创建线路" : "创建#{@company.name}的线路" %></h1>
   <% end -%>
   <% if ["edit", "update"].index(action_name) -%>
-    <h1><%= @company.blank? ? "修改专题" : "修改#{@company.name}的专题" %></h1>
+    <h1><%= @company.blank? ? "修改线路" : "修改#{@company.name}的线路" %></h1>
   <% end -%>
 <% end -%>
 <%= content_for :sidebar do -%>
@@ -14,9 +14,9 @@
     <div class="button_to_add_new">
       <div class="button_layout">
         <% if @company.blank? %>
-          <a href="<%= new_admin_topic_path %>"><span>添加新的专题</span></a>
+          <a href="<%= new_admin_route_path %>"><span>添加新的线路</span></a>
         <% else -%>
-          <a href="<%= new_admin_company_topic_path(@company) %>"><span>添加新的专题</span></a>
+          <a href="<%= new_admin_company_route_path(@company) %>"><span>添加新的线路</span></a>
         <% end -%>
       </div>
     </div>      
@@ -26,14 +26,15 @@
       <h3>小贴士</h3>
       <div class="indent">
         <p>标题必须小于255个字符。</p>
-        <p>在简介中不能含有任何html标签，系统自动过滤。</p>
-        <p>你可以根据实际情况手动调整“浏览量”，“推荐指数”，“人气指数”，“系统会自动累加浏览量”。</p>
+        <p>在线路特色中不能含有任何html标签，系统自动过滤。</p>
+        <p>出发城市，出发时间，组团人数必须填写。</p>
+        <p>组团人数必须是大于1的整数。</p>
       </div>
     </div>
     <div class="mbox">
       <h3>站内导航</h3>
       <div class="indent">
-        <p><a href="<%= !@company.blank? ? admin_company_topics_path(@company) : admin_topics_path %>">返回专题列表</a></p>
+        <p><a href="<%= !@company.blank? ? admin_company_routes_path(@company) : admin_routes_path %>">返回线路列表</a></p>
       </div>
     </div>
   <% end -%>

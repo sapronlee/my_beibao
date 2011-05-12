@@ -1,5 +1,5 @@
 <%= javascript_include_tag :ckeditor %>
-<%= simple_form_for([:admin, @company, @topic], :html => { :multipart => true }) do |f| -%>
+<%= simple_form_for([:admin, @company, @article], :html => { :multipart => true }) do |f| -%>
   <%= f.error_messages %>
   <div id="post_form_container">
     <div class="main_attributes">
@@ -13,25 +13,23 @@
         <% else -%>
           <%= f.association :company %>
         <% end -%>
+        <%= f.input :status, :as => :hidden, :input_html => { :value => Article::STATE[:normal] } %>
+        <% if admin_signed_in? %>
+          <%= f.input :auther, :as => :hidden, :input_html => { :value => current_admin.login } %>
+        <% end -%>
       </div>
     </div>
   </div>
   <div class="other_container">
     <%= f.input :cover, :required => true %>
-    <% if @topic.cover? %>
+    <% if @article.cover? %>
       <div class="cover_prview">
-        <%= image_tag @topic.cover.url %>
+        <%= image_tag @article.cover.url %>
       </div>
     <% end -%>
   </div>
   <div class="other_container">
     <%= f.input :pv %>
-  </div>
-  <div class="other_container">
-    <%= f.input :rec_num %>
-  </div>
-  <div class="other_container">
-    <%= f.input :pop_num %>
   </div>
   <div class="actions">
     <%= f.button :submit %>

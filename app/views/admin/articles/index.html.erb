@@ -1,0 +1,26 @@
+<% title("文章列表") %>
+<%= render "base" %>
+<%= grid(@articles) do |g|
+  g.column :column_name => "名称", :attribute_name => "title"
+  g.column :column_name => "栏目", :attribute_name => "name", :model_class => "Area" do |article|
+    article.area.name
+  end
+  if @company.blank?
+    g.column :column_name => "公司", :attribute_name => "name", :model_class => "Company" do |article|
+      article.area.name
+    end
+  end
+  g.column :column_name => "浏览量", :attribute_name => "pv"
+  g.column :column_name => "状态", :attribute_name => "status", :auto_reload => true, :custom_filter => Article::STATE do |article|
+    t("activerecord.attributes.article.state.#{Article::STATE.key(article.status)}")
+  end
+  if @company.blank?
+    g.column :td_html_attrs => { :class => "actions" } do |article|
+      raw "#{link_to("编辑", edit_admin_article_path(article))} | #{link_to("删除", admin_article_path(article), :method => :delete)}"
+    end
+  else
+    g.column :td_html_attrs => { :class => "actions" } do |article|
+      raw "#{link_to("编辑", edit_admin_company_article_path(@company, article))} | #{link_to("删除", admin_company_article_path(@company, article), :method => :delete)}"
+    end
+  end
+end -%>

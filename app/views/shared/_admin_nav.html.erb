@@ -1,3 +1,6 @@
-<li><a href="<%= admin_root_path %>"<%= raw(" class=\"current\"") if ["home"].index(controller_name) %> title="首页">Dashboard</a></li>
-<li><a href="<%= admin_companies_path %>"<%= raw(" class=\"current\"") if ["companies"].index(controller_name) %> title="旅游公司管理">Company</a></li>
-<li><a href="<%= admin_areas_path %>"<%= raw(" class=\"current\"") if ["areas"].index(controller_name) %> title="栏目管理">Area</a></li>
+<li><a href="<%= admin_root_path %>"<%= raw(" class=\"current\"") if ["home"].index(controller_name) %> title="首页"><%= t("activerecord.models.dashboard") %></a></li>
+<li><a href="<%= admin_companies_path %>"<%= raw(" class=\"current\"") if ["companies"].index(controller_name) %> title="旅游公司管理"><%= t("activerecord.models.company") %></a></li>
+<li><a href="<%= admin_areas_path %>"<%= raw(" class=\"current\"") if ["areas"].index(controller_name) %> title="栏目管理"><%= t("activerecord.models.area") %></a></li>
+<li><a href="<%= admin_topics_path %>"<%= raw(" class=\"current\"") if ["topics"].index(controller_name) %> title="专题管理"><%= t("activerecord.models.topic") %></a></li>
+<li><a href="<%= admin_articles_path %>"<%= raw(" class=\"current\"") if ["articles"].index(controller_name) %> title="文章管理"><%= t("activerecord.models.article") %></a></li>
+<li><a href="<%= admin_routes_path %>"<%= raw(" class=\"current\"") if ["routes"].index(controller_name) %> title="线路管理"><%= t("activerecord.models.route") %></a></li>

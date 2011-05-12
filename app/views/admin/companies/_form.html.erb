@@ -16,10 +16,10 @@
     </div>
   </div>
   <div id="other_container">
-    <%= f.input :cover %>
-    <% if @company.cover.blank? %>
+    <%= f.input :cover, :required => true %>
+    <% if @company.cover? %>
       <div class="cover_prview">
-        <%= image_tag @company.cover %>
+        <%= image_tag @company.cover.url %>
       </div>
     <% end -%>
   </div>

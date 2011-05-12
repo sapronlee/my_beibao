@@ -1,6 +1,6 @@
 ChinaBeiBao::Application.routes.draw do
   devise_for :admins,
-    :controllers => { :sessions => 'admins/sessions' }
+    :controllers => { :sessions => 'admins/sessions', :registrations => "admins/registrations" }
     
   root :to => "home#index"
   
@@ -8,8 +8,10 @@ ChinaBeiBao::Application.routes.draw do
     root :to => 'home#index'
     resources :companies do
       resources :topics
+      resources :articles
+      resources :routes
     end
-    resources :areas
+    resources :areas, :topics, :articles, :routes
   end
 
   # The priority is based upon order of creation:

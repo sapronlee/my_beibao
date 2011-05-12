@@ -1,0 +1,25 @@
+<% title("专题列表") %>
+<%= render "base" %>
+<%= grid(@topics) do |g|
+  g.column :column_name => "名称", :attribute_name => "title"
+  g.column :column_name => "栏目", :attribute_name => "name", :model_class => "Area" do |topic|
+    topic.area.name
+  end
+  if @company.blank?
+    g.column :column_name => "公司", :attribute_name => "name", :model_class => "Company" do |topic|
+      topic.area.name
+    end
+  end
+  g.column :column_name => "浏览量", :attribute_name => "pv"
+  g.column :column_name => "推荐指数", :attribute_name => "rec_num"
+  g.column :column_name => "人气指数", :attribute_name => "pop_num"
+  if @company.blank?
+    g.column :td_html_attrs => { :class => "actions" } do |topic|
+      raw "#{link_to("编辑", edit_admin_topic_path(topic))} | #{link_to("删除", admin_topic_path(topic), :method => :delete)}"
+    end
+  else
+    g.column :td_html_attrs => { :class => "actions" } do |topic|
+      raw "#{link_to("编辑", edit_admin_company_topic_path(@company, topic))} | #{link_to("删除", admin_company_topic_path(@company, topic), :method => :delete)}"
+    end
+  end
+end -%>

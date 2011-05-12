@@ -8,7 +8,13 @@
   g.column :column_name => "联系人", :attribute_name => "linkman"
   g.column :column_name => "电话", :attribute_name => "tel"
   g.column :column_name => "专题" do |company|
-    raw "#{link_to("查看专题", admin_company_topics_path(company), :title => "查看#{company.name}的专题列表")}"
+    raw "#{link_to("专题", admin_company_topics_path(company), :title => "查看#{company.name}的专题列表")}"
+  end
+  g.column :column_name => "文章" do |company|
+    raw "#{link_to("文章", admin_company_articles_path(company), :title => "查看#{company.name}的文章列表")}"
+  end
+  g.column :column_name => "线路" do |company|
+    raw "#{link_to("线路", admin_company_routes_path(company), :title => "查看#{company.name}的线路列表")}"
   end
   g.column :td_html_attrs => { :class => "actions" } do |company|
     raw "#{link_to("编辑", edit_admin_company_path(company))} | #{link_to("删除", admin_company_path(company), :method => :delete)}"

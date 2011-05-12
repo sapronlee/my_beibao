@@ -1,19 +1,19 @@
 # coding : utf-8
-class Admin::TopicsController < Admin::ApplicationController
+class Admin::ArticlesController < Admin::ApplicationController
   before_filter :init_company
   
   def index
     conditions = { :company_id => @company.id } if !@company.blank?
-    @topics = initialize_grid(Topic, :include => [:area, :company], :conditions => conditions || nil)
+    @articles = initialize_grid(Article, :include => [:area, :company], :conditions => conditions || nil)
   end
   
   def new
-    @topic = Topic.new
+    @article = Article.new
   end
   
   def create
-    @topic = Topic.new(params[:topic])
-    if @topic.save
+    @article = Article.new(params[:article])
+    if @article.save
       flash[:notice] = "专题创建成功，你可以继续操作！"
       redirect_path
     else
@@ -22,12 +22,12 @@ class Admin::TopicsController < Admin::ApplicationController
   end
   
   def edit
-    @topic = Topic.find(params[:id])
+    @article = Article.find(params[:id])
   end
   
   def update
-    @topic = Topic.find(params[:id])
-    if @topic.update_attributes(params[:topic])
+    @article = Article.find(params[:id])
+    if @article.update_attributes(params[:article])
       flash[:notice] = "专题更新成功，你可以继续操作！"
       redirect_path
     else
@@ -36,8 +36,8 @@ class Admin::TopicsController < Admin::ApplicationController
   end
   
   def destroy
-    @topic = Topic.find(params[:id])
-    if @topic.destroy
+    @article = Article.find(params[:id])
+    if @article.destroy
       flash[:notice] = "专题删除成功！"
     else
       flash[:alert] = "专题删除失败！"
@@ -52,9 +52,9 @@ class Admin::TopicsController < Admin::ApplicationController
   
   def redirect_path
     if !@company.blank?
-      redirect_to admin_company_topics_path(@company)
+      redirect_to admin_company_articles_path(@company)
     else
-      redirect_to admin_topics_path
+      redirect_to admin_articles_path
     end
   end
 end

@@ -120,3 +120,11 @@ body#login input.password { width: 400px; border: 1px solid #DDD; border-left-co
   padding: 7px 4px; line-height: 16px; background: #fff; }
 body#login input.boolean { vertical-align: middle; width: auto; }
 body#login label.boolean { display: inline-block; vertical-align: middle; line-height: 13px; }
+
+/* home index styles */
+body.home_index div.items { padding: 10px 0px; }
+body.home_index div.items h2 { font-size: 14px; font-weight: bold; }
+body.home_index div.items ul { padding-left: 20px; }
+body.home_index div.items ul li { list-style-type: cjk-ideographic; }
+body.home_index div.items ul li a { color: #bf0000; }
+body.home_index div.items ul li a:hover { color: #03c; }

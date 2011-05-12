@@ -14,7 +14,7 @@
         <div id="header_top_wrapper">
           <span class="email"><%= current_admin.email %></span>
           <span class="pipe">|</span>
-          <a href="#">我的信息</a>
+          <a href="<%= edit_admin_registration_path %>">我的信息</a>
           <span class="pipe">|</span>
           <a href="<%= destroy_admin_session_path %>">Sign out</a>
         </div>

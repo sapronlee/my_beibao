@@ -1,12 +1,17 @@
 <%= javascript_include_tag :ckeditor %>
-<%= simple_form_for([:admin, @company, @topic], :html => { :multipart => true }) do |f| -%>
+<%= simple_form_for([:admin, @company, @route], :html => { :multipart => true }) do |f| -%>
   <%= f.error_messages %>
   <div id="post_form_container">
     <div class="main_attributes">
       <div class="inner">
         <%= f.input :title %>
         <%= f.input :summary %>
-        <%= f.ckeditor :body, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.ckeditor :journey, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.ckeditor :indemnify, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.ckeditor :notice, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.input :city %>
+        <%= f.input :start_date %>
+        <%= f.input :pcount %>
         <%= f.association :area %>
         <% if !@company.blank? %>
           <%= f.input :company_id, :as => :hidden, :input_html => { :value => @company.id } %>
@@ -18,21 +23,12 @@
   </div>
   <div class="other_container">
     <%= f.input :cover, :required => true %>
-    <% if @topic.cover? %>
+    <% if @route.cover? %>
       <div class="cover_prview">
-        <%= image_tag @topic.cover.url %>
+        <%= image_tag @route.cover.url %>
       </div>
     <% end -%>
-  </div>
-  <div class="other_container">
-    <%= f.input :pv %>
-  </div>
-  <div class="other_container">
-    <%= f.input :rec_num %>
-  </div>
-  <div class="other_container">
-    <%= f.input :pop_num %>
-  </div>
+  </div>  
   <div class="actions">
     <%= f.button :submit %>
   </div>

@@ -1,0 +1,22 @@
+<% title("线路列表") %>
+<%= render "base" %>
+<%= grid(@routes) do |g|
+  g.column :column_name => "名称", :attribute_name => "title"
+  g.column :column_name => "栏目", :attribute_name => "name", :model_class => "Area" do |route|
+    route.area.name
+  end
+  if @company.blank?
+    g.column :column_name => "公司", :attribute_name => "name", :model_class => "Company" do |route|
+      route.area.name
+    end
+  end
+  if @company.blank?
+    g.column :td_html_attrs => { :class => "actions" } do |route|
+      raw "#{link_to("编辑", edit_admin_route_path(route))} | #{link_to("删除", admin_route_path(route), :method => :delete)}"
+    end
+  else
+    g.column :td_html_attrs => { :class => "actions" } do |route|
+      raw "#{link_to("编辑", edit_admin_company_route_path(@company, route))} | #{link_to("删除", admin_company_route_path(@company, route), :method => :delete)}"
+    end
+  end
+end -%>
