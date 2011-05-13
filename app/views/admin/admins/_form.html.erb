@@ -1,0 +1,16 @@
+<%= simple_form_for([:admin, @admin]) do |f| -%>
+  <%= f.error_messages %>
+  <div id="post_form_container">
+    <div class="main_attributes">
+      <div class="inner">
+        <%= f.input :login %>
+        <%= f.input :email %>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation %>
+      </div>
+    </div>
+  </div>  
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end -%>

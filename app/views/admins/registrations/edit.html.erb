@@ -1,4 +1,4 @@
-
+<% title("修改信息") %>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= f.error_messages %>
   <div id="post_form_container">
@@ -8,7 +8,6 @@
         <%= f.input :email %>
         <%= f.input :password, :label => "新密码", :hint => "如果不修改密码请留空" %>
         <%= f.input :password_confirmation, :hint => "请保持与新密码一致" %>
-        <%= f.input :current_password, :hint => "必须填写", :required => true %>
       </div>
     </div>
   </div>  

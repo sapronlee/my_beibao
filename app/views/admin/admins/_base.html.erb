@@ -1,0 +1,30 @@
+<%= content_for :page_header do -%>
+  <% if ["index"].index(action_name) -%>
+    <h1>管理员列表</h1>
+  <% end -%>
+  <% if ["new", "create"].index(action_name) -%>
+    <h1>创建管理员</h1>
+  <% end -%>
+  <% if ["edit", "update"].index(action_name) -%>
+    <h1>修改管理员</h1>
+  <% end -%>
+<% end -%>
+<%= content_for :sidebar do -%>
+  <% if ["index"].index(action_name) -%>
+    <div class="button_to_add_new">
+      <div class="button_layout">
+        <a href="<%= new_admin_admin_path %>"><span>添加新的管理员</span></a>
+      </div>
+    </div>
+  <% end -%>
+  <% if ["new", "create", "edit", "create"].index(action_name) -%>
+    <div class="mbox">
+      <h3>站内导航</h3>
+      <div class="indent">
+        <ul class="nav">
+          <li><a href="<%= admin_admins_path %>"><span>返回管理员列表</span></a></li>
+        </ul>
+      </div>
+    </div>
+  <% end -%>
+<% end -%>

@@ -289,5 +289,3 @@ zh-cn:
       create: "创建新的%{model}"
       update: "更新%{model}"
       submit: "储存%{model}"
-      admin:
-        create: "登录"

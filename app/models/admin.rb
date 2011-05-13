@@ -7,6 +7,9 @@ class Admin < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :login, :email, :password, :password_confirmation, :remember_me
   
+  validates_presence_of :login
+  validates_uniqueness_of :login
+  
   protected
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup

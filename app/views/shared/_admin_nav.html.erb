@@ -4,3 +4,4 @@
 <li><a href="<%= admin_topics_path %>"<%= raw(" class=\"current\"") if ["topics"].index(controller_name) %> title="专题管理"><%= t("activerecord.models.topic") %></a></li>
 <li><a href="<%= admin_articles_path %>"<%= raw(" class=\"current\"") if ["articles"].index(controller_name) %> title="文章管理"><%= t("activerecord.models.article") %></a></li>
 <li><a href="<%= admin_routes_path %>"<%= raw(" class=\"current\"") if ["routes"].index(controller_name) %> title="线路管理"><%= t("activerecord.models.route") %></a></li>
+<li><a href="<%= admin_admins_path %>"<%= raw(" class=\"current\"") if ["admins"].index(controller_name) %> title="管理员管理"><%= t("activerecord.models.admin") %></a></li>

@@ -4,7 +4,9 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title><%= yield :title %></title>
     <%= stylesheet_link_tag "reset", "wice_grid", "admin/application" %>
+    <%= yield :styles %>
     <%= javascript_include_tag :admin %>
+    <%= yield :scripts %>
     <%= csrf_meta_tag %>
   </head>
   <body class="<%= "#{controller_name}_#{action_name}" %>">

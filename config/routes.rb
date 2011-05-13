@@ -11,7 +11,7 @@ ChinaBeiBao::Application.routes.draw do
       resources :articles
       resources :routes
     end
-    resources :areas, :topics, :articles, :routes
+    resources :areas, :topics, :articles, :routes, :admins
   end
 
   # The priority is based upon order of creation:

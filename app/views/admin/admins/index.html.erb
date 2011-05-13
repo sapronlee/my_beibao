@@ -1,0 +1,13 @@
+<% title("管理员列表") %>
+<%= render "base" %>
+<%= grid(@admins) do |g|
+  g.column :column_name => "用户名", :attribute_name => "login"
+  g.column :column_name => "邮箱", :attribute_name => "email"
+  g.column :column_name => "登陆IP", :attribute_name => "last_sign_in_ip"
+  g.column :column_name => "登陆时间", :attribute_name => "last_sign_in_at", :no_filter => true do |admin|
+    l(admin.last_sign_in_at, :format => :long) if admin.last_sign_in_at?
+  end
+  g.column :td_html_attrs => { :class => "actions" } do |admin|
+    raw "#{link_to("编辑", edit_admin_admin_path(admin))} | #{link_to("删除", admin_admin_path(admin), :method => :delete)}"
+  end
+end -%>
