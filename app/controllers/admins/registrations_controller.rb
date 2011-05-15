@@ -4,8 +4,11 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   layout 'admin'
   
   def update
-    params[resource_name].delete(:password) if params[resource_name][:password].blank?
-    params[resource_name].delete(:password_confirmation) if params[resource_name][:password_confirmation].blank?
+    if params[resource_name][:password].blank?
+      params[resource_name].delete(:password) 
+      params[resource_name].delete(:password_confirmation)
+    end
+    
     if resource.update_attributes(params[resource_name])
       set_flash_message :notice, :updated
       sign_in resource_name, resource, :bypass => true

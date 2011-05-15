@@ -23,9 +23,12 @@ class Admin::AdminsController < Admin::ApplicationController
   end
   
   def update
+    if params[:admin][:password].blank?
+      params[:admin].delete(:password) 
+      params[:admin].delete(:password_confirmation)
+    end
+    
     @admin = Admin.find(params[:id])
-    params[:admin].delete(:password) if params[:admin][:password].blank?
-    params[:admin].delete(:password_confirmation) if params[:admin][:password_confirmation].blank?
     if @admin.update_attributes(params[:admin])
       redirect_to admin_admins_path, :notice => "更新管理员成功！你可以继续操作。"
     else
