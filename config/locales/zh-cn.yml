@@ -169,6 +169,7 @@ zh-cn:
         even: "必须为双数"
         taken: "已经被使用"
         record_invalid: "校验失败: %{errors}"
+        invalid_enum: "无效的选择"
     models:
       admin: "管理员"
       company: "公司"
@@ -200,6 +201,9 @@ zh-cn:
       area:
         name: "名称"
         slug: "别名"
+        number: "序号"
+        description: "描述"
+        status_cd: "状态"
       topic:
         title: "标题"
         summary: "简介"
@@ -249,6 +253,11 @@ zh-cn:
         cover_file_size: "封面图大小"
         cover_file_name: "封面图"
         cover_content_type: "封面图类型"
+    enums:      
+      area:
+        statuses:
+          enabled: "有效的"
+          disabled: "无效的"
         
 
   activemodel:

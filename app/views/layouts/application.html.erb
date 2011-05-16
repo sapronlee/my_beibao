@@ -1,10 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title></title>
+    <title><%= yield :title %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag :defaults %>
+    <%= yield :styles %>
+    <%= javascript_include_tag :defaults %>
+    <%= yield :scripts %>
+    <%= csrf_meta_tag %>
   </head>
   <body>
-    
+    <div class="wrapper container_16">
+      <div id="header">
+        <%= render "shared/header" %>
+      </div>
+      <div id="main" class="<%= page_column %>">
+      <% if content_for?(:left) -%>
+        <div class="column_left"><%= yield :left %></div>
+      <% end -%>
+      <div class="column_content"><%= yield %></div>
+      <% if content_for?(:right) %>
+        <div class="column_right"><%= yield :right %></div>
+      <% end -%>
+      </div>
+      <div id="footer">
+        <%= render "shared/footer" %>
+      </div>
+    </div>
   </body>
 </html>

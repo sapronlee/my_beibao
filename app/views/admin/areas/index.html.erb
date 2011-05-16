@@ -6,6 +6,10 @@
 <%= grid(@areas) do |g|
   g.column :column_name => "名称", :attribute_name => "name"
   g.column :column_name => "别名", :attribute_name => "slug"
+  g.column :column_name => "序号", :attribute_name => "number"
+  g.column :column_name => "状态", :attribute_name => "status_cd", :auto_reload => true, :custom_filter => Area.statuses_for_select(:value) do |area|
+    t("activerecord.enums.area.statuses.#{area.status.to_s}")
+  end
   g.column :td_html_attrs => { :class => "actions" } do |area|
     raw "#{link_to("编辑", edit_admin_area_path(area))} | #{link_to("删除", admin_area_path(area), :method => :delete)}"
   end

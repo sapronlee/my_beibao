@@ -29,7 +29,7 @@
   <h2>最新添加的文章</h2>
   <ul>
     <% @articles.each do |article| -%>
-      <li><%= link_to(article.title, admin_article_path(topic), :title => article.title) %></li>
+      <li><%= link_to(article.title, admin_article_path(article), :title => article.title) %></li>
     <% end -%>
   </ul>
 </div>

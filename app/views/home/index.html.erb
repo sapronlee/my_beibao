@@ -1,0 +1,69 @@
+<% title "首页" %>
+<%= content_for :scripts do -%>
+  <%= javascript_include_tag "jquery.KinSlideshow" %>
+<% end -%>
+<div class="main_top clearfix">
+  <div class="main_topleft">
+    <div id="focus">
+      <% @focus_topics.each do |topic| -%>
+        <a href="<%= topic_path(topic) %>" title="<%= topic.title %>"><%= image_tag topic.cover.url, :alt => topic.title %></a>
+      <% end -%>
+    </div>
+  </div>
+  <div class="main_topright">
+    <div class="box">
+      <div class="title_wrapper">
+        <h3>推荐俱乐部</h3>
+      </div>
+      <% @recommend_company.each do |company| -%>
+      <div class="basic_info clearfix">
+        <%= image_tag company.cover.url, :class => "cover", :alt => company.name %>
+        <div class="info">
+          <ul>
+            <li class="name"><a href="#"><%= company.name %></a></li>
+            <li class="linkman"><span>联系人：</span><%= company.linkman %></li>
+            <li class="address"><span>地址：</span><%= company.address %></li>
+          </ul>
+        </div>
+      </div>
+      <p class="summary"><%= truncate company.summary, :length => 60 %></p>
+      <div class="online_icon clearfix">
+        <div class="icon"><%= single_qq company.qq %></div>
+        <div class="icon"><%= single_msn company.msn %></div>
+      </div>
+      <% end -%>
+    </div>
+  </div>
+</div>
+<% @areas.each do |area| -%>
+<div class="area_container">
+  <div class="area_banner"></div>
+  <div class="area">
+    <h2><%= area.name %></h2>
+    <div class="area_wrapper">
+      <div class="route">
+        <h3>旅游线路</h3>
+        <ul>
+          <% area.routes.top10.each do |route| %>
+            <%= render "index_route", :r => route %>
+          <% end -%>
+        </ul>
+      </div>
+      <div class="recommend">
+        <h3>特色推荐</h3>
+        <% area.topics.top.each do |topic| %>
+          <%= render "index_topic", :t => topic %>
+        <% end -%>
+      </div>
+      <div class="article">
+        <h3>游记攻略</h3>
+        <ul>
+          <% area.articles.top2.each do |article| -%>
+            <%= render "index_article", :a => article %>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<% end -%>

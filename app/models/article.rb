@@ -24,4 +24,6 @@ class Article < ActiveRecord::Base
   # abnormal 不正常
   # normal 正常
   STATE = { :abnormal => 0, :normal => 1 }
+  
+  scope :top2, :order => "id desc", :limit => 2
 end

@@ -1,0 +1,15 @@
+<div class="info">
+  <%= image_tag t.cover.url %>
+  <h3><a href="<%= topic_path(t) %>"><%= t.title %></a></h3>
+  <p><%= t.summary %></p>
+</div>
+<div class="exp_container">
+  <div class="exp">
+    <span class="label">推荐指数：</span>
+    <span class="star"><%= t.rec_num %></span>
+  </div>
+  <div class="exp">
+    <span class="label">人气指数：</span>
+    <span class="star"><%= t.pop_num %></span>
+  </div>
+</div>

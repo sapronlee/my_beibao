@@ -5,6 +5,9 @@
       <div class="inner">
         <%= f.input :name %>
         <%= f.input :slug %>
+        <%= f.input :number %>
+        <%= f.input :description, :as => :text %>
+        <%= f.input :status_cd, :collection => Area.statuses_for_select(:value), :prompt => "请选择状态", :as => :select %>
       </div>
     </div>
   </div>  

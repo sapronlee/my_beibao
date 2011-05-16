@@ -1,0 +1,42 @@
+/* common styles */
+html, body { font: 12px/1.5 'Lucida Grande', Verdana, Arial, "\5b8b\4f53", Sans-Serif; color: #333; }
+a:link, a:visited, a:active { color: #03c; text-decoration: underline; }
+a:hover { color: #bf0000; text-decoration: none; }
+
+.box { overflow: hidden; border: 1px solid lightGrey; background: #fff; }
+.box .title_wrapper { padding: 1px; border-bottom: 1px solid lightGrey; background: #fff; }
+.box .title_wrapper h3 { height: 30px; line-height: 30px; display: block; color: #333; padding-left: 10px; font-size: 14px; font-weight: 700;
+  background: url(/images/common/titbg.gif) 0 0 repeat-x; }
+
+/* header layout styles */
+div.wrapper {}
+div#header { margin-top: 10px; }
+div#header h1.logo { height: 90px; float: left; width: 200px; }
+div#header div.header_banner { width: 630px; height: 90px; float: right; }
+div#header div.navigation { overflow: hidden; padding-left: 3px; height: 33px; background: #2b7acd url(/images/common/nv.png) 0 0 no-repeat; margin: 10px 0; }
+div#header div.navigation li { float: left; padding-right: 1px; height: 33px; line-height: 33px; font-weight: 700; font-size: 14px;
+  background: url(/images/common/nv_a.png) 100% 0 no-repeat; }
+div#header div.navigation li a { color: #fff; float: left; padding: 0 20px; height: 33px; display: block; text-decoration: none; }
+div#header div.navigation li a:hover { text-decoration: underline; background: url(/images/common/nv_a.png) 50% -66px no-repeat; }
+div#header div.navigation li.current { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
+
+/* main layout styles */
+div.one_column div.column_content { width: 100%; }
+
+div.main_top { background: #f0f0f0; padding: 10px; }
+div.main_top div.main_topleft { width: 600px; float: left; height: 250px; overflow: hidden; }
+div.main_topleft div#focus { visibility: hidden; width: 600px; }
+div.main_topleft div#focus a { display: block; }
+div.main_topleft div#focus a img { width: 600px; height: 250px; }
+
+div.main_top div.main_topright { width: 330px; float: right; height: 250px; overflow: hidden; }
+div.main_top div.main_topright div.box { height: 248px; }
+div.main_topright div.basic_info { }
+div.main_topright div.basic_info img.cover { width: 120px; height: 80px; float: left; margin: 10px; padding: 2px; background: #fff;
+  border: 1px solid #ccc; }
+div.main_topright div.basic_info div.info { padding: 10px 10px 0 0; }
+div.main_topright div.basic_info div.info li { margin: 2px 0;}
+div.main_topright div.basic_info div.info li.name a { font-size: 14px; color: #bf0000; text-decoration: none; }
+div.main_topright p.summary { padding: 0 10px 10px 10px; color: #666; }
+div.main_topright div.online_icon { }
+div.main_topright div.online_icon div.icon { float: left; width: 164px; text-align: center; }

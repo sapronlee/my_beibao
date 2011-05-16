@@ -20,4 +20,6 @@ class Route < ActiveRecord::Base
     :path => "#{APP_CONFIG["upload_path"]}/:attachment/:date_path/:style_:hash_name.:extension",
     :default_url => "default/files/:style.jpg",
     :whiny => false
+    
+  scope :top10, :order => "id desc", :limit => 10
 end

@@ -30,10 +30,10 @@ if Object.const_defined?("Ckeditor")
     #config.swf_file_upload_limit = 5
      
     # The same as for downloads files, only to upload images
-    #config.swf_image_file_types_description = "Images"
-    #config.swf_image_file_types = "*.jpg;*.jpeg;*.png;*.gif"
-    #config.swf_image_file_size_limit = "5 MB"
-    #config.swf_image_file_upload_limit = 10
+    config.swf_image_file_types_description = "Images"
+    config.swf_image_file_types = "*.jpg;*.jpeg;*.png;*.gif"
+    config.swf_image_file_size_limit = "5 MB"
+    config.swf_image_file_upload_limit = 10
     
     # Path for view all uploaded files
     #config.file_manager_uri = "/ckeditor/attachments"

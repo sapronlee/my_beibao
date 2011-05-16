@@ -24,4 +24,6 @@ class Topic < ActiveRecord::Base
     :path => "#{APP_CONFIG["upload_path"]}/:attachment/:date_path/:style_:hash_name.:extension",
     :default_url => "default/files/:style.jpg",
     :whiny => false
+    
+  scope :top, order("id desc").limit(1)
 end

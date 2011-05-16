@@ -1,0 +1,11 @@
+<ul class="clearfix">
+  <li <%= raw("class=\"current\"") if ["home"].index(controller_name) %>>
+    <a href="<%= root_path %>" title="中国背包网首页">首页</a>
+  </li>
+  <% @areas.each do |area| -%>
+    <li>
+      <a href="<%= areas_path(area.slug) %>" title="<%= area.description %>"><%= area.name %></a>
+    </li>
+  <% end -%>
+  <li><a href="http://bbs.chinabeibao.com" title="论坛">论坛</a></li>
+</ul>
