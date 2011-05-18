@@ -34,10 +34,10 @@
 </div>
 <% @areas.each do |area| -%>
 <div class="area_container">
-  <div class="area_banner"></div>
+  <div class="area_banner"><%= image_tag "ad/cz_index.jpg" %></div>
   <div class="area">
-    <h2><%= area.name %></h2>
-    <div class="area_wrapper">
+    <h2><a href="<%= area_path(area.slug) %>" title="<%= area.name %>"><%= area.name %></a></h2>
+    <div class="area_wrapper clearfix">
       <div class="route">
         <h3>旅游线路</h3>
         <ul>

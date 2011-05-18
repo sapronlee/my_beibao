@@ -40,3 +40,23 @@ div.main_topright div.basic_info div.info li.name a { font-size: 14px; color: #b
 div.main_topright p.summary { padding: 0 10px 10px 10px; color: #666; }
 div.main_topright div.online_icon { }
 div.main_topright div.online_icon div.icon { float: left; width: 164px; text-align: center; }
+
+div.one_column div.area_container { margin: 10px 0; }
+div.one_column div.area_container div.area_banner { width: 960px; height: 90px; }
+div.one_column div.area_container div.area { border: 1px solid lightGrey; margin-top: 10px; }
+div.one_column div.area_container div.area h2 { border-bottom: 1px solid lightGrey; height: 30px; line-height: 30px; font-weight: 700; padding: 0 10px; color: #c6005a; 
+  font-size: 14px; background: url(/images/common/titbg.gif) 0 0 repeat-x; }
+div.one_column div.area_container div.area h2 a { color: #c6005a; text-decoration: none; }
+div.one_column div.area_container div.area h2 a:hover { color: #03c; }
+div.one_column div.area_container div.area div.area_wrapper { padding: 10px; }
+div.one_column div.area_wrapper div.route { width: 198px; float: left; overflow: hidden; border: 1px solid lightGrey; height: 100px; }
+div.one_column div.area_wrapper div.recommend { width: 448px; float: left; overflow: hidden; margin: 0 10px; border: 1px solid lightGrey; }
+div.one_column div.area_wrapper div.article { width: 266px; float: left; overflow: hidden; border: 1px solid lightGrey; }
+div.one_column div.area_wrapper div.route h3, 
+div.one_column div.area_wrapper div.recommend h3,
+div.one_column div.area_wrapper div.article h3 { border-bottom: 1px solid lightGrey; padding:5px 5px; font-weight: 700; background: url(/images/common/titbg.gif) 0 0 repeat-x; }
+div.one_column div.recommend div.info_wrapper { padding: 10px; }
+div.one_column div.recommend div.info img.cover { width: 200px; height: 84px; float: left; padding: 2px; background: #fff; border: 1px solid #ccc; margin-right: 10px; }
+div.one_column div.recommend div.info h4 { font-size: 14px; color: #bf0000; }
+div.one_column div.recommend div.exp_container { margin-top: 10px; }
+div.one_column div.recommend div.exp_container div.exp { float: left; width: 200px; height: 14px; line-height: 14px; }

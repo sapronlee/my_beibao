@@ -15,7 +15,7 @@ ChinaBeiBao::Application.routes.draw do
   end
   
   resources :topics, :routes, :articles, :only => [:index, :show]
-  match '/:slug' => 'areas#index', :as => :areas
+  match '/:slug' => 'areas#index', :as => :area
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
