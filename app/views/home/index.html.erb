@@ -38,22 +38,22 @@
   <div class="area">
     <h2><a href="<%= area_path(area.slug) %>" title="<%= area.name %>"><%= area.name %></a></h2>
     <div class="area_wrapper clearfix">
-      <div class="route">
-        <h3>旅游线路</h3>
-        <ul>
-          <% area.routes.top10.each do |route| %>
-            <%= render "index_route", :r => route %>
-          <% end -%>
-        </ul>
-      </div>
       <div class="recommend">
         <h3>特色推荐</h3>
         <% area.topics.top.each do |topic| %>
           <%= render "index_topic", :t => topic %>
         <% end -%>
       </div>
+      <div class="route">
+        <h3>经典线路<span class="more"><a href="#">更多</a</span></h3>
+        <ul>
+          <% area.routes.top10.each do |route| -%>
+            <%= render "index_route", :r => route %>
+          <% end -%>
+        </ul>
+      </div>
       <div class="article">
-        <h3>游记攻略</h3>
+        <h3>游记攻略<span class="more"><a href="#">更多</a</span></h3>
         <ul>
           <% area.articles.top2.each do |article| -%>
             <%= render "index_article", :a => article %>

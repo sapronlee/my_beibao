@@ -1,6 +1,6 @@
 /* common styles */
 html, body { font: 12px/1.5 'Lucida Grande', Verdana, Arial, "\5b8b\4f53", Sans-Serif; color: #333; }
-a:link, a:visited, a:active { color: #03c; text-decoration: underline; }
+a:link, a:visited, a:active { color: #2d7ecf; text-decoration: underline; }
 a:hover { color: #bf0000; text-decoration: none; }
 
 .box { overflow: hidden; border: 1px solid lightGrey; background: #fff; }
@@ -36,7 +36,7 @@ div.main_topright div.basic_info img.cover { width: 120px; height: 80px; float: 
   border: 1px solid #ccc; }
 div.main_topright div.basic_info div.info { padding: 10px 10px 0 0; }
 div.main_topright div.basic_info div.info li { margin: 2px 0;}
-div.main_topright div.basic_info div.info li.name a { font-size: 14px; color: #bf0000; text-decoration: none; }
+div.main_topright div.basic_info div.info li.name a { font-size: 14px; color: #bf0000; text-decoration: none; font-weight: 700; }
 div.main_topright p.summary { padding: 0 10px 10px 10px; color: #666; }
 div.main_topright div.online_icon { }
 div.main_topright div.online_icon div.icon { float: left; width: 164px; text-align: center; }
@@ -44,19 +44,35 @@ div.main_topright div.online_icon div.icon { float: left; width: 164px; text-ali
 div.one_column div.area_container { margin: 10px 0; }
 div.one_column div.area_container div.area_banner { width: 960px; height: 90px; }
 div.one_column div.area_container div.area { border: 1px solid lightGrey; margin-top: 10px; }
-div.one_column div.area_container div.area h2 { border-bottom: 1px solid lightGrey; height: 30px; line-height: 30px; font-weight: 700; padding: 0 10px; color: #c6005a; 
+div.one_column div.area_container div.area h2 { border-bottom: 1px solid lightGrey; height: 30px; line-height: 30px; font-weight: 700; padding: 0 10px; color: #bf0000; 
   font-size: 14px; background: url(/images/common/titbg.gif) 0 0 repeat-x; }
-div.one_column div.area_container div.area h2 a { color: #c6005a; text-decoration: none; }
+div.one_column div.area_container div.area h2 a { color: #bf0000; text-decoration: none; }
 div.one_column div.area_container div.area h2 a:hover { color: #03c; }
 div.one_column div.area_container div.area div.area_wrapper { padding: 10px; }
-div.one_column div.area_wrapper div.route { width: 198px; float: left; overflow: hidden; border: 1px solid lightGrey; height: 100px; }
-div.one_column div.area_wrapper div.recommend { width: 448px; float: left; overflow: hidden; margin: 0 10px; border: 1px solid lightGrey; }
-div.one_column div.area_wrapper div.article { width: 266px; float: left; overflow: hidden; border: 1px solid lightGrey; }
+div.one_column div.area_wrapper div.route,
+div.one_column div.area_wrapper div.article { width: 346px; float: left; overflow: hidden; margin-left: 10px }
+div.one_column div.area_wrapper div.route ul { margin: 10px 0; }
+div.one_column div.area_wrapper div.route ul li { border-bottom: 1px dotted #ccc; padding: 3px 10px 2px 15px; background: url(/images/common/hdian.png) 0px 6px no-repeat; }
+div.one_column div.area_wrapper div.route ul li span { float: right; }
+div.one_column div.area_wrapper div.route ul li a { text-decoration: none; font-size: 13px; }
+div.one_column div.area_wrapper div.route ul li a:hover { text-decoration: underline; }
+div.one_column div.area_wrapper div.article ul { padding: 10px; }
+div.one_column div.area_wrapper div.article li { margin-bottom: 10px; height: 86px; overflow: hidden; }
+div.one_column div.area_wrapper div.article li img.cover { width: 80px; height: 80px; padding: 2px; border: 1px solid #ccc; float: left; margin-right: 10px; }
+div.one_column div.area_wrapper div.article li h4 { font-size: 13px; font-weight: 700; }
+div.one_column div.area_wrapper div.article li p { margin-top: 5px; }
+div.one_column div.area_wrapper div.recommend { width: 226px; float: left; overflow: hidden;  }
 div.one_column div.area_wrapper div.route h3, 
 div.one_column div.area_wrapper div.recommend h3,
-div.one_column div.area_wrapper div.article h3 { border-bottom: 1px solid lightGrey; padding:5px 5px; font-weight: 700; background: url(/images/common/titbg.gif) 0 0 repeat-x; }
+div.one_column div.area_wrapper div.article h3 
+{ padding: 0 0 5px 0; font-weight: 700; border-bottom: 5px solid #ccc;}
+div.one_column div.area_wrapper h3 span.more { float: right; font-weight: normal; }
+div.one_column div.area_wrapper h3 span.more a { text-decoration: none; }
 div.one_column div.recommend div.info_wrapper { padding: 10px; }
-div.one_column div.recommend div.info img.cover { width: 200px; height: 84px; float: left; padding: 2px; background: #fff; border: 1px solid #ccc; margin-right: 10px; }
-div.one_column div.recommend div.info h4 { font-size: 14px; color: #bf0000; }
-div.one_column div.recommend div.exp_container { margin-top: 10px; }
-div.one_column div.recommend div.exp_container div.exp { float: left; width: 200px; height: 14px; line-height: 14px; }
+div.one_column div.recommend div.info img.cover { width: 200px; height: 120px; padding: 2px; background: #fff; border: 1px solid #ccc; }
+div.one_column div.recommend div.info h4 a { font-size: 14px; color: #bf0000; text-decoration: none; font-weight: 700; }
+div.one_column div.recommend div.info h4 a:hover { text-decoration: underline; }
+div.one_column div.recommend div.info p { color: #666; }
+div.one_column div.recommend div.exp_container { margin-top: 5px; }
+div.one_column div.recommend div.exp_container div.exp { float: left; width: 192px; height: 14px; line-height: 14px; position: relative; color: #666; padding-top: 3px; }
+div.one_column div.recommend div.exp_container div.exp span.star { position: absolute; top: 2px; }

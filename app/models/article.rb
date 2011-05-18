@@ -12,7 +12,7 @@ class Article < ActiveRecord::Base
   
   has_attached_file :cover,  
     :styles => {
-      :thumb => "140x140#",
+      :thumb => "80x80#",
       :small => "400>",
       :normal => "690>" },
     :default_style => :normal,

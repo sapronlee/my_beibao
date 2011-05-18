@@ -1,1 +1,1 @@
-<li><a href="<%= route_path(r) %>"><%= r.title %></a></li>
+<li><a href="<%= route_path(r) %>"><%= truncate r.title, :length => 20 %></a><span class="mum"><%= r.pcount %>人</span></li>

@@ -2,16 +2,15 @@
   <div class="info clearfix">
     <%= image_tag t.cover.url, :class => "cover" %>
     <h4><a href="<%= topic_path(t) %>"><%= t.title %></a></h4>
-    <p><%= t.summary %></p>
   </div>
   <div class="exp_container clearfix">
     <div class="exp">
       <span class="label">推荐指数：</span>
-      <span class="star"><%= image_tag "common/star.png" %></span>
+      <span class="star"><%= image_tag "common/star/#{t.rec_num}.png" %></span>
     </div>
     <div class="exp">
       <span class="label">人气指数：</span>
-      <span class="star"><%= t.pop_num %></span>
+      <span class="star"><%= image_tag "common/star/#{t.pop_num}.png" %></span>
     </div>
   </div>
 </div>
