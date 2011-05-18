@@ -16,9 +16,8 @@ class Topic < ActiveRecord::Base
   
   has_attached_file :cover,  
     :styles => {
-      :thumb => "140x140#",
-      :small => "400>",
-      :normal => "690>" },
+      :normal => "600x250#" 
+    },
     :default_style => :normal,
     :url => "#{APP_CONFIG["upload_url"]}/:attachment/:date_path/:style_:hash_name.:extension",
     :path => "#{APP_CONFIG["upload_path"]}/:attachment/:date_path/:style_:hash_name.:extension",

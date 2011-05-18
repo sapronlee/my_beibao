@@ -13,9 +13,10 @@ class Company < ActiveRecord::Base
   
   has_attached_file :cover,  
     :styles => {
-      :thumb => "140x140#",
-      :small => "400>",
-      :normal => "690>" },
+      :small => "120x80#",
+      :normal => "200x160#",
+      :big => "300>" 
+    },
     :default_style => :normal,
     :url => "#{APP_CONFIG["upload_url"]}/:attachment/:date_path/:style_:hash_name.:extension",
     :path => "#{APP_CONFIG["upload_path"]}/:attachment/:date_path/:style_:hash_name.:extension",

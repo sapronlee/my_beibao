@@ -1,12 +1,9 @@
 <% title "首页" %>
-<%= content_for :scripts do -%>
-  <%= javascript_include_tag "jquery.KinSlideshow" %>
-<% end -%>
 <div class="main_top clearfix">
   <div class="main_topleft">
     <div id="focus">
       <% @focus_topics.each do |topic| -%>
-        <a href="<%= topic_path(topic) %>" title="<%= topic.title %>"><%= image_tag topic.cover.url, :alt => topic.title %></a>
+        <a href="<%= topic_path(topic) %>" title="<%= topic.title %>"><%= image_tag topic.cover(:normal), :alt => topic.title %></a>
       <% end -%>
     </div>
   </div>
@@ -17,7 +14,7 @@
       </div>
       <% @recommend_company.each do |company| -%>
       <div class="basic_info clearfix">
-        <%= image_tag company.cover.url, :class => "cover", :alt => company.name %>
+        <%= image_tag company.cover(:small), :class => "cover", :alt => company.name %>
         <div class="info">
           <ul>
             <li class="name"><a href="#"><%= company.name %></a></li>
@@ -66,4 +63,28 @@
     </div>
   </div>
 </div>
+<% end -%>
+<%= content_for :scripts do -%>
+  <%= javascript_include_tag "jquery.KinSlideshow" %>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      $("#focus").KinSlideshow({
+        mouseEvent: "mouseover",
+        titleBar: {
+          titleBar_height: 30,
+          titleBar_bgColor: "#08355c",
+          titleBar_alpha:0.5
+        },
+        btn: {
+          btn_bgColor: "#FFFFFF",
+          btn_bgHoverColor: "#1072aa",
+          btn_fontColor: "#000000",
+          btn_fontHoverColor: "#FFFFFF",
+          btn_borderColor: "#cccccc",
+          btn_borderHoverColor: "#1188c0",
+          btn_borderWidth: 1
+        }
+      });
+    })
+  </script>
 <% end -%>

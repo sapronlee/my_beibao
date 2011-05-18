@@ -5,8 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <%= stylesheet_link_tag :defaults %>
     <%= yield :styles %>
-    <%= javascript_include_tag :defaults %>
-    <%= yield :scripts %>
     <%= csrf_meta_tag %>
   </head>
   <body>
@@ -27,5 +25,7 @@
         <%= render "shared/footer" %>
       </div>
     </div>
+    <%= javascript_include_tag :defaults %>
+    <%= yield :scripts %>
   </body>
 </html>
