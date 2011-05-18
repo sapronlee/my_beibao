@@ -1,5 +1,9 @@
 <li class="clearfix">
-  <%= image_tag a.cover(:thumb), :class => "cover" %>
-  <h4><a href="#"><%= truncate a.title, :length => 18 %></a></h4>
+  <a href="<%= article_path(a) %>" title="<%= a.title %>">
+    <%= image_tag a.cover(:thumb), :class => "cover" %>
+  </a>
+  <h4>
+    <a href="<%= article_path(a) %>" title="<%= a.title %>"><%= truncate a.title, :length => 18 %></a>
+  </h4>
   <p><%= truncate a.summary, :length => 60 %></p>
 </li>
