@@ -9,7 +9,7 @@
     <%= yield :scripts %>
     <%= csrf_meta_tag %>
   </head>
-  <body>
+  <body id="<%= "#{controller_name}_#{action_name}" %>">
     <div class="wrapper container_16">
       <div id="header">
         <%= render "shared/header" %>

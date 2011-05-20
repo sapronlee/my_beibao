@@ -7,6 +7,7 @@ a:hover { color: #bf0000; text-decoration: none; }
 .box .title_wrapper { padding: 1px; border-bottom: 1px solid lightGrey; background: #fff; }
 .box .title_wrapper h3 { height: 30px; line-height: 30px; display: block; color: #333; padding-left: 10px; font-size: 14px; font-weight: 700;
   background: url(/images/common/titbg.gif) 0 0 repeat-x; }
+.box.line10 { margin-top: 10px; }
 
 /* header layout styles */
 div.wrapper {}
@@ -19,14 +20,13 @@ div#header div.navigation li { float: left; padding-right: 1px; height: 33px; li
 div#header div.navigation li a { color: #fff; float: left; padding: 0 20px; height: 33px; display: block; text-decoration: none; }
 div#header div.navigation li a:hover { text-decoration: underline; background: url(/images/common/nv_a.png) 50% -66px no-repeat; }
 div#header div.navigation li.current { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
+div#header div.navigation li.cz { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
 
 /* main layout styles */
 div.one_column div.column_content { width: 100%; }
 
 div.main_top { background: #f0f0f0; padding: 10px; }
 div.main_top div.main_topleft { width: 600px; float: left; height: 250px; overflow: hidden; }
-div.main_topleft div#focus { visibility: hidden; width: 600px; }
-div.main_topleft div#focus a { display: block; }
 div.main_topleft div#focus a img { width: 600px; height: 250px; }
 
 div.main_top div.main_topright { width: 330px; float: right; height: 250px; overflow: hidden; }

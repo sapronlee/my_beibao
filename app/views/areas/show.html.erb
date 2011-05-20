@@ -1,0 +1,107 @@
+<% title @area.name %>
+<div class="area_wrapper clearfix">
+  <div class="area_banner"><%= image_tag "ad/cz_index.jpg" %></div>
+  <div class="left">
+    <div class="box">
+      <div class="title_wrapper"><h3><%= @area.name %>的专题</h3></div>
+      <div class="topics_wrapper">
+        <ul class="clearfix">
+          <% @topics.each_with_index do |topic, index| -%>
+            <%= render "topics", :t => topic, :i => index %>
+          <% end -%>
+        </ul>
+        <div class="more">
+          <a href="<%= topics_path %>" title="查看更多的专题>>">查看更多的专题>></a>
+        </div>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3><%= @area.name %>线路</h3></div>
+      <div class="routes_wrapper">
+        <ul>
+          <% @routes.each do |route| -%>
+            <li>
+              <div class="title_wrapper">
+                <span class="title"><a href="<%= route_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 25 %></a></span>
+                <span class="commpany"><%= truncate route.company.name, :length => 20 %></span>
+              </div>              
+            </li>
+          <% end -%>
+        </ul>
+        <div class="more">
+          <a href="<%= routes_path %>" title="查看更多的线路>>">查看更多的线路>></a>
+        </div>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3><%= @area.name %>游记攻略</h3></div>
+      <div class="articles_wrapper">
+        <ul>
+          <% @articles.each do |article| -%>
+            <li class="<%= cycle("even", "odd") %> clearfix">
+              <div class="title"><a href="<%= article_path(article) %>" title="<%= article.title %>"><%= article.title %></a></div>
+              <div class="summary"><%= truncate article.summary, :length => 150 %></div>
+              <div class="cover">
+                <a href="<%= article_path(article) %>" title="<%= article.title %>">
+                  <%= image_tag article.cover(:thumb), :class => "cover", :alt => article.title %>
+                </a>
+              </div>
+              <div class="info">
+                <span class="author"><%= article.auther %></span>发布于
+                <span class="date"><%= l article.created_at, :format => :long %></span>
+              </div>
+            </li>
+          <% end -%>
+        </ul>
+        <div class="more">
+          <a href="<%= articles_path %>" title="查看更多的攻略>>">查看更多的攻略>></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="box">
+      <div class="title_wrapper"><h3>区域导航</h3></div>
+      <div class="right_areas_wrapper">
+        <ul class="clearfix">
+          <% @areas.each do |area| -%>
+            <li><a href="<%= area_path(area.slug) %>" title="<%= area.name %>"><%= area.name %></a></li>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>最新的旅游线路</h3></div>
+      <div class="right_routes_wrapper">
+        <ul class="clearfix">
+          <% @recent_routes.each do |route| -%>
+            <li><a href="<%= route_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 18 %></a></li>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>最新的旅游专题</h3></div>
+      <div class="right_routes_wrapper">
+        <ul class="clearfix">
+          <% @recent_topics.each do |route| -%>
+            <li><a href="<%= route_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 18 %></a></li>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>最新的游记攻略</h3></div>
+      <div class="right_routes_wrapper">
+        <ul class="clearfix">
+          <% @recent_articles.each do |route| -%>
+            <li><a href="<%= route_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 18 %></a></li>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :styles do -%>
+  <%= stylesheet_link_tag "area" %>
+<% end -%>

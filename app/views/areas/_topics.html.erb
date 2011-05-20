@@ -1,0 +1,18 @@
+<li <%= raw "class=\"last\"" if (i + 1) % 3 == 0 %>>
+  <a href="<%= topic_path(t) %>" title="<%= t.title %>" class="cover">
+    <%= image_tag t.cover(:small), :alt => t.title, :class => "cover" %>
+  </a>
+  <a href="<%= topic_path(t) %>" title="<%= t.title %>" class="title">
+    <%= truncate t.title, :length => 15 %>
+  </a>
+  <div class="exp_wrapper">
+    <div class="exp">
+      <span class="label">推荐指数：</span>
+      <span class="star"><%= image_tag "common/star/#{t.rec_num}.png", :alt => "#{t.rec_num}星" %></span>
+    </div>
+    <div class="exp">
+      <span class="label">人气指数：</span>
+      <span class="star"><%= image_tag "common/star/#{t.pop_num}.png", :alt => "#{t.pop_num}星" %></span>
+    </div>
+  </div>
+</li>

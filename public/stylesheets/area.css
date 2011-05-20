@@ -1,0 +1,44 @@
+body#areas_show div.area_banner { margin-bottom: 10px; }
+
+body#areas_show div.area_wrapper div.left { width: 660px; float: left; }
+body#areas_show div.area_wrapper div.right { width: 280px; float: right; }
+
+body#areas_show div.topics_wrapper { padding: 10px; overflow: hidden; }
+body#areas_show div.topics_wrapper li { float: left; margin-right: 10px; margin-bottom: 5px; }
+body#areas_show div.topics_wrapper li.last { margin-right: 0; }
+body#areas_show div.topics_wrapper li a { display: block; width: 206px; }
+body#areas_show div.topics_wrapper li a.title { color: #bf0000; font-size: 14px; font-weight: 700; text-decoration: none; }
+body#areas_show div.topics_wrapper li a.title:hover { color: #2d7ecf; }
+body#areas_show div.topics_wrapper li img.cover { width: 200px; height: 120px; padding: 2px; background: #fff; border:1px solid #ccc; }
+body#areas_show div.topics_wrapper div.exp_wrapper { margin-top: 8px; }
+body#areas_show div.topics_wrapper div.exp_wrapper div.exp { margin-bottom: 5px; position: relative; }
+body#areas_show div.topics_wrapper div.exp_wrapper div.exp span.star { position: absolute; top: 2px; }
+
+body#areas_show div.more { text-align: right; }
+body#areas_show div.more a { font-weight: 700; text-decoration: none; }
+
+body#areas_show div.routes_wrapper { padding: 10px; overflow: hidden; }
+body#areas_show div.routes_wrapper li { margin-bottom: 10px; border-bottom: 1px dotted #ccc; padding-bottom: 5px; }
+body#areas_show div.routes_wrapper div.title_wrapper { border: none; }
+body#areas_show div.routes_wrapper div.title_wrapper span.title a { font-weight: 700; text-decoration: none; font-size: 14px; } 
+body#areas_show div.routes_wrapper div.title_wrapper span.commpany { float: right; color: #666; }
+
+body#areas_show div.articles_wrapper { overflow: hidden; }
+body#areas_show div.articles_wrapper li { position: relative; height: 100px; padding: 10px; }
+body#areas_show div.articles_wrapper li.odd { background: whiteSmoke; border-top: 1px solid #ccc; }
+body#areas_show div.articles_wrapper div.title a { font-weight: 700; font-size: 14px; text-decoration: none; }
+body#areas_show div.articles_wrapper div.summary { float: left; width: 552px; padding-top: 2px; overflow: hidden; color: #666; }
+body#areas_show div.articles_wrapper div.cover { float: right; width: 86px; }
+body#areas_show div.articles_wrapper div.cover img.cover { padding: 2px; background: #fff; border: 1px solid #ccc; width: 64px; height: 64px; }
+body#areas_show div.articles_wrapper div.info { clear: both; position: absolute; bottom: 12px; color: #ccc; }
+body#areas_show div.articles_wrapper div.info span.author { font-weight: 700; padding-right: 10px; }
+body#areas_show div.articles_wrapper div.info span.date { padding-left: 5px; }
+body#areas_show div.articles_wrapper div.more { padding: 10px; border-top: 1px solid #ccc; }
+
+body#areas_show div.right_areas_wrapper { padding: 10px; }
+body#areas_show div.right_areas_wrapper li { float: left; margin-right: 10px; margin-bottom: 10px; }
+body#areas_show div.right_areas_wrapper li a { font-size: 14px; }
+
+body#areas_show div.right_routes_wrapper { padding: 10px; }
+body#areas_show div.right_routes_wrapper li { border-bottom: 1px dotted #ccc; padding: 3px 10px 2px 15px; background: url(/images/common/hdian.png) 0px 8px no-repeat; }
+body#areas_show div.right_routes_wrapper li a { font-size: 14px; }
