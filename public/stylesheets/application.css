@@ -27,13 +27,13 @@ div#header h1.logo a { width: 230px; height: 62px; display: block; padding-top: 
 div#header h1.logo img { width: 230px; height: 62px; padding-top: 20px; display: none; }
 div#header div.header_banner { width: 630px; height: 90px; float: right; }
 div#header div.header_banner img { width: 630px; height: 70px; padding-top: 15px; }
-div#header div.navigation { overflow: hidden; padding-left: 3px; height: 33px; background: #2b7acd url(/images/common/nv.png) 0 0 no-repeat; margin: 10px 0; }
+div#header div.navigation { overflow: hidden; padding-left: 3px; height: 33px; background: #c90000 url(/images/common/nv.png) 0 0 no-repeat; margin: 10px 0; }
 div#header div.navigation li { float: left; padding-right: 1px; height: 33px; line-height: 33px; font-weight: 700; font-size: 14px;
   background: url(/images/common/nv_a.png) 100% 0 no-repeat; }
 div#header div.navigation li a { color: #fff; float: left; padding: 0 20px; height: 33px; display: block; text-decoration: none; }
 div#header div.navigation li a:hover { text-decoration: underline; background: url(/images/common/nv_a.png) 50% -66px no-repeat; }
-div#header div.navigation li.current { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
-div#header div.navigation li.cz { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
+div#header div.navigation li.current { margin-left: -1px; background: #c90000 url(/images/common/nv_a.png) 50% -33px no-repeat; }
+div#header div.navigation li.cz { margin-left: -1px; background: #c90000 url(/images/common/nv_a.png) 50% -33px no-repeat; }
 
 /* footer layout styles */
 div#footer { margin: 10px 0 20px 0; }
