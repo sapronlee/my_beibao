@@ -7,7 +7,7 @@
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :summary %>
-        <%= f.ckeditor :body, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.ckeditor :body, :input_html => { :height => 300, :toolbar=>'Full', :swf_params => { :assetable_type => 'Admin', :assetable_id => current_admin.id } } %>
         <%= f.input :tel %>
         <%= f.input :linkman %>
         <%= f.input :qq %>

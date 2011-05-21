@@ -18,8 +18,8 @@ class Area < ActiveRecord::Base
     :styles => {
       :normal => "960>" },
     :default_style => :normal,
-    :url => "#{APP_CONFIG["upload_url"]}/:attachment/:date_path/:style_:hash_name.:extension",
-    :path => "#{APP_CONFIG["upload_path"]}/:attachment/:date_path/:style_:hash_name.:extension",
+    :url => "#{APP_CONFIG["upload_url"]}/:class/:attachment/:date_path/:id/:style_:hash_name.:extension",
+    :path => "#{APP_CONFIG["upload_path"]}/:class/:attachment/:date_path/:id/:style_:hash_name.:extension",
     :default_url => "defaults/area/ad/:style.jpg",
     :whiny => false
   

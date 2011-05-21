@@ -6,7 +6,7 @@
       <div class="inner">
         <%= f.input :title %>
         <%= f.input :summary %>
-        <%= f.ckeditor :body, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.ckeditor :body, :input_html => { :height => 300, :toolbar=>'Full', :swf_params => { :assetable_type => 'Admin', :assetable_id => current_admin.id } } %>
         <%= f.association :area %>
         <% if !@company.blank? %>
           <%= f.input :company_id, :as => :hidden, :input_html => { :value => @company.id } %>

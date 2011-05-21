@@ -5,7 +5,7 @@
   <h2>最新添加的公司</h2>
   <ul>
     <% @companies.each do |company| -%>
-      <li><%= link_to(company.name, admin_company_path(company), :title => company.name) %></li>
+      <li><%= link_to(company.name, company_path(company), :title => company.name, :target => "_blank") %></li>
     <% end -%>
   </ul>
 </div>
@@ -13,7 +13,7 @@
   <h2>最新添加的栏目</h2>
   <ul>
     <% @areas.each do |area| -%>
-      <li><%= link_to(area.name, admin_area_path(area), :title => area.name) %></li>
+      <li><%= link_to(area.name, area_path(area), :title => area.name, :target => "_blank") %></li>
     <% end -%>
   </ul>
 </div>
@@ -21,7 +21,7 @@
   <h2>最新添加的专题</h2>
   <ul>
     <% @topics.each do |topic| -%>
-      <li><%= link_to(topic.title, admin_topic_path(topic), :title => topic.title) %></li>
+      <li><%= link_to(topic.title, topic_path(topic), :title => topic.title, :target => "_blank") %></li>
     <% end -%>
   </ul>
 </div>
@@ -29,7 +29,7 @@
   <h2>最新添加的文章</h2>
   <ul>
     <% @articles.each do |article| -%>
-      <li><%= link_to(article.title, admin_article_path(article), :title => article.title) %></li>
+      <li><%= link_to(article.title, article_path(article), :title => article.title, :target => "_blank") %></li>
     <% end -%>
   </ul>
 </div>
@@ -37,7 +37,7 @@
   <h2>最新添加的线路</h2>
   <ul>
     <% @routes.each do |route| -%>
-      <li><%= link_to(route.title, admin_route_path(route), :title => route.title) %></li>
+      <li><%= link_to(route.title, route_path(route), :title => route.title, :target => "_blank") %></li>
     <% end -%>
   </ul>
 </div>

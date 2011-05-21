@@ -5,10 +5,10 @@
     <div class="main_attributes">
       <div class="inner">
         <%= f.input :title %>
-        <%= f.input :summary %>
-        <%= f.ckeditor :journey, :input_html => { :height => 300, :toolbar=>'Full' } %>
-        <%= f.ckeditor :indemnify, :input_html => { :height => 300, :toolbar=>'Full' } %>
-        <%= f.ckeditor :notice, :input_html => { :height => 300, :toolbar=>'Full' } %>
+        <%= f.ckeditor :summary, :input_html => { :height => 300, :toolbar=>'Full', :swf_params => { :assetable_type => 'Admin', :assetable_id => current_admin.id } } %>
+        <%= f.ckeditor :journey, :input_html => { :height => 300, :toolbar=>'Full', :swf_params => { :assetable_type => 'Admin', :assetable_id => current_admin.id } } %>
+        <%= f.ckeditor :indemnify, :input_html => { :height => 300, :toolbar=>'Full', :swf_params => { :assetable_type => 'Admin', :assetable_id => current_admin.id } } %>
+        <%= f.ckeditor :notice, :input_html => { :height => 300, :toolbar=>'Full', :swf_params => { :assetable_type => 'Admin', :assetable_id => current_admin.id } } %>
         <%= f.input :city %>
         <%= f.input :start_date %>
         <%= f.input :pcount %>
