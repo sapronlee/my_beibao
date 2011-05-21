@@ -1,0 +1,26 @@
+<% title("#{@article.title}") %>
+<div class="article_wrapper clearfix">
+  <div class="left">
+    <div class="article clearfix">
+      <h1 class="title"><%= @article.title %></h1>
+      <div class="info clearfix">
+        <span class="author">作者：<span><%= @article.auther %></span></span>
+        <span class="date">创建时间：<span><%= l @article.created_at, :format => :long %></span></span>
+        <span class="pv">浏览数：<span><%= @article.pv %></span></span>
+      </div>
+      <div class="body"><%= raw @article.body %></div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>其他游记攻略</h3></div>
+      <div class="articles_wrapper">
+        <%= render "areas/articles", :articles => @articles %>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <%= render "/shared/sidebar", :areas => @areas, :topics => @recent_topics, :routes => @recent_routes, :articles => @recent_articles %>
+  </div>
+</div>
+<% content_for :styles do -%>
+  <%= stylesheet_link_tag "area" %>
+<% end -%>

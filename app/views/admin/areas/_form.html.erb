@@ -1,4 +1,4 @@
-<%= simple_form_for([:admin, @area]) do |f| -%>
+<%= simple_form_for([:admin, @area], :html => { :multipart => true }) do |f| -%>
   <%= f.error_messages %>
   <div id="post_form_container">
     <div class="main_attributes">
@@ -8,6 +8,7 @@
         <%= f.input :number %>
         <%= f.input :description, :as => :text %>
         <%= f.input :status_cd, :collection => Area.statuses_for_select(:value), :prompt => "请选择状态", :as => :select %>
+        <%= f.input :ad %>
       </div>
     </div>
   </div>  

@@ -1,4 +1,4 @@
-<li class="clearfix">
+<li class="<%= cycle("even", "odd") %> clearfix">
   <a href="<%= article_path(a) %>" title="<%= a.title %>">
     <%= image_tag a.cover(:thumb), :class => "cover" %>
   </a>

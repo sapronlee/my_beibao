@@ -15,7 +15,7 @@ class Company < ActiveRecord::Base
     :styles => {
       :small => "120x80#",
       :normal => "200x160#",
-      :big => "300>" 
+      :big => "250x168#" 
     },
     :default_style => :normal,
     :url => "#{APP_CONFIG["upload_url"]}/:attachment/:date_path/:style_:hash_name.:extension",

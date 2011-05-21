@@ -1,0 +1,64 @@
+<% if !@company.blank? %>
+<div class="box">
+  <div class="title_wrapper"><h3>俱乐部信息</h3></div>
+  <div class="right_company_wrapper clearfix">
+    <a href="<%= company_path(@company) %>" title="<%= @company.name %>">
+      <%= image_tag @company.cover(:big), :class => "cover", :alt => @company.name %>
+    </a>
+    <div class="info">
+      <ul>
+        <li class="name">
+          <a href="<%= company_path(@company) %>" title="<%= @company.name %>"><%= @company.name %></a>
+        </li>
+        <li class="linkman"><span>联系人：</span><%= @company.linkman %></li>
+        <li class="address"><span>地址：</span><%= @company.address %></li>
+      </ul>
+    </div>        
+    <p class="summary"><%= truncate @company.summary, :length => 60 %></p>
+    <div class="online_icon clearfix">
+      <div class="icon"><%= single_qq @company.qq %></div>
+      <div class="icon"><%= single_msn @company.msn %></div>
+    </div>
+  </div>
+</div>
+<% end -%>
+<div class="box <%= "line10" if !@company.blank? %>">
+  <div class="title_wrapper"><h3>区域导航</h3></div>
+  <div class="right_areas_wrapper">
+    <ul class="clearfix">
+      <% areas.each do |area| -%>
+        <li><a href="<%= area_path(area.slug) %>" title="<%= area.name %>"><%= area.name %></a></li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+<div class="box line10">
+  <div class="title_wrapper"><h3>最新的旅游线路</h3></div>
+  <div class="right_lists_wrapper">
+    <ul class="clearfix">
+      <% routes.each do |route| -%>
+        <li><a href="<%= route_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 17 %></a></li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+<div class="box line10">
+  <div class="title_wrapper"><h3>最新的旅游专题</h3></div>
+  <div class="right_lists_wrapper">
+    <ul class="clearfix">
+      <% topics.each do |route| -%>
+      <li><a href="<%= topic_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 17 %></a></li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+<div class="box line10">
+  <div class="title_wrapper"><h3>最新的游记攻略</h3></div>
+  <div class="right_lists_wrapper">
+    <ul class="clearfix">
+      <% articles.each do |route| -%>
+      <li><a href="<%= article_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 17 %></a></li>
+      <% end -%>
+    </ul>
+  </div>
+</div>

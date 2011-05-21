@@ -15,11 +15,11 @@ ChinaBeiBao::Application.routes.draw do
   end
   
   
-  resources :topics, :routes, :articles, :company, :only => [:index, :show]
+  resources :topics, :routes, :articles, :companies, :only => [:index, :show]
   match '/:slug' => 'areas#show', :as => :area
-  match '/:area_slug/topics' => 'topics#index', :as => :area_topics
-  match '/:area_slug/articles' => 'articles#index', :as => :area_articles
-  match '/:area_slug/routes' => 'routes#index', :as => :area_routes
+  match '/:slug/topics' => 'topics#index', :as => :area_topics
+  match '/:slug/articles' => 'articles#index', :as => :area_articles
+  match '/:slug/routes' => 'routes#index', :as => :area_routes  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         # 
   # The priority is based upon order of creation:
   # first created -> highest priority.

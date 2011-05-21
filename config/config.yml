@@ -1,11 +1,11 @@
 # config/config.yml
 development:  
   # 配置图片的域名
-  # upload_url: "http://192.168.1.2:3000/uploads"
-  upload_url: "http://localhost:3000/uploads"
+  upload_url: "http://192.168.1.2:3000/uploads"
+  # upload_url: "http://localhost:3000/uploads"
   # 上传途径
-  # upload_path: "/home/chucklee/works/ChinaBeiBao/public/uploads"
-  upload_path: "/home/boli/works/my_beibao/public/uploads"
+  upload_path: "/home/chucklee/works/ChinaBeiBao/public/uploads"
+  # upload_path: "/home/boli/works/my_beibao/public/uploads"
   
 test:  
   # 配置图片的域名

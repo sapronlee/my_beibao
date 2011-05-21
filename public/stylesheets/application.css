@@ -1,19 +1,32 @@
 /* common styles */
 html, body { font: 12px/1.5 'Lucida Grande', Verdana, Arial, "\5b8b\4f53", Sans-Serif; color: #333; }
 a:link, a:visited, a:active { color: #2d7ecf; text-decoration: underline; }
-a:hover { color: #bf0000; text-decoration: none; }
+a:hover { color: #BA350F; text-decoration: none; }
 
 .box { overflow: hidden; border: 1px solid lightGrey; background: #fff; }
 .box .title_wrapper { padding: 1px; border-bottom: 1px solid lightGrey; background: #fff; }
 .box .title_wrapper h3 { height: 30px; line-height: 30px; display: block; color: #333; padding-left: 10px; font-size: 14px; font-weight: 700;
   background: url(/images/common/titbg.gif) 0 0 repeat-x; }
 .box.line10 { margin-top: 10px; }
+.line10 {  margin-top: 10px; }
+
+/* pagination layout styles */
+.pagination { padding: 10px 0; text-align: right; }
+.pagination span { display: inline-block; }
+.pagination span.current { padding: 3px 8px; border: 1px solid #bc4f4f; background: #BA350F; color: #fff; }
+.pagination a { display: inline-block; padding: 3px 4px; border: 1px solid #ccc; background: #fff; text-decoration: none; }
+.pagination span.page a { padding: 3px 8px; }
+.pagination span a:hover { background: #2d7ecf; color: #fff; border-color: #4180bf; }
 
 /* header layout styles */
-div.wrapper {}
-div#header { margin-top: 10px; }
-div#header h1.logo { height: 90px; float: left; width: 200px; }
+div#header_top { padding: 4px; background: #000; color: #fff; display: none; }
+div.wrapper {background: url(/images/background.png) 50% 0 no-repeat; }
+div#header {}
+div#header h1.logo { height: 90px; float: left; width: 230px; }
+div#header h1.logo a { width: 230px; height: 62px; display: block; padding-top: 20px; }
+div#header h1.logo img { width: 230px; height: 62px; padding-top: 20px; display: none; }
 div#header div.header_banner { width: 630px; height: 90px; float: right; }
+div#header div.header_banner img { width: 630px; height: 70px; padding-top: 15px; }
 div#header div.navigation { overflow: hidden; padding-left: 3px; height: 33px; background: #2b7acd url(/images/common/nv.png) 0 0 no-repeat; margin: 10px 0; }
 div#header div.navigation li { float: left; padding-right: 1px; height: 33px; line-height: 33px; font-weight: 700; font-size: 14px;
   background: url(/images/common/nv_a.png) 100% 0 no-repeat; }
@@ -21,6 +34,9 @@ div#header div.navigation li a { color: #fff; float: left; padding: 0 20px; heig
 div#header div.navigation li a:hover { text-decoration: underline; background: url(/images/common/nv_a.png) 50% -66px no-repeat; }
 div#header div.navigation li.current { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
 div#header div.navigation li.cz { margin-left: -1px; background: #005ab4 url(/images/common/nv_a.png) 50% -33px no-repeat; }
+
+/* footer layout styles */
+div#footer { margin: 10px 0 20px 0; }
 
 /* main layout styles */
 div.one_column div.column_content { width: 100%; }
@@ -36,28 +52,29 @@ div.main_topright div.basic_info img.cover { width: 120px; height: 80px; float: 
   border: 1px solid #ccc; }
 div.main_topright div.basic_info div.info { padding: 10px 10px 0 0; }
 div.main_topright div.basic_info div.info li { margin: 2px 0;}
-div.main_topright div.basic_info div.info li.name a { font-size: 14px; color: #bf0000; text-decoration: none; font-weight: 700; }
+div.main_topright div.basic_info div.info li.name a { font-size: 14px; color: #BA350F; text-decoration: none; font-weight: 700; }
 div.main_topright p.summary { padding: 0 10px 10px 10px; color: #666; }
 div.main_topright div.online_icon { }
 div.main_topright div.online_icon div.icon { float: left; width: 164px; text-align: center; }
 
 div.one_column div.area_container { margin: 10px 0; }
-div.one_column div.area_container div.area_banner { width: 960px; height: 90px; }
+div.one_column div.area_container div.area_banner { width: 960px; overflow: hidden; }
 div.one_column div.area_container div.area { border: 1px solid lightGrey; margin-top: 10px; }
-div.one_column div.area_container div.area h2 { border-bottom: 1px solid lightGrey; height: 30px; line-height: 30px; font-weight: 700; padding: 0 10px; color: #bf0000; 
+div.one_column div.area_container div.area h2 { border-bottom: 1px solid lightGrey; height: 30px; line-height: 30px; font-weight: 700; padding: 0 10px; color: #BA350F; 
   font-size: 14px; background: url(/images/common/titbg.gif) 0 0 repeat-x; }
-div.one_column div.area_container div.area h2 a { color: #bf0000; text-decoration: none; }
+div.one_column div.area_container div.area h2 a { color: #BA350F; text-decoration: none; }
 div.one_column div.area_container div.area h2 a:hover { color: #03c; }
 div.one_column div.area_container div.area div.area_wrapper { padding: 10px; }
 div.one_column div.area_wrapper div.route,
 div.one_column div.area_wrapper div.article { width: 346px; float: left; overflow: hidden; margin-left: 10px }
-div.one_column div.area_wrapper div.route ul { margin: 10px 0; }
-div.one_column div.area_wrapper div.route ul li { border-bottom: 1px dotted #ccc; padding: 3px 10px 2px 15px; background: url(/images/common/hdian.png) 0px 6px no-repeat; }
+div.one_column div.area_wrapper div.route ul { margin: 10px 0 0 0; }
+div.one_column div.area_wrapper div.route ul li { border-bottom: 1px dotted #ccc; padding: 4px 10px 3px 15px; background: url(/images/common/hdian.png) 0px 6px no-repeat; }
 div.one_column div.area_wrapper div.route ul li span { float: right; }
 div.one_column div.area_wrapper div.route ul li a { text-decoration: none; font-size: 13px; }
 div.one_column div.area_wrapper div.route ul li a:hover { text-decoration: underline; }
-div.one_column div.area_wrapper div.article ul { padding: 10px; }
-div.one_column div.area_wrapper div.article li { margin-bottom: 10px; height: 86px; overflow: hidden; }
+div.one_column div.area_wrapper div.article ul { padding: 10px 0 0 0; }
+div.one_column div.area_wrapper div.article li { margin-bottom: 17px; height: 86px; overflow: hidden; }
+div.one_column div.area_wrapper div.article li.odd { margin-bottom: 0px; }
 div.one_column div.area_wrapper div.article li img.cover { width: 80px; height: 80px; padding: 2px; border: 1px solid #ccc; float: left; margin-right: 10px; }
 div.one_column div.area_wrapper div.article li h4 { font-size: 13px; font-weight: 700; }
 div.one_column div.area_wrapper div.article li p { margin-top: 5px; }
@@ -68,11 +85,27 @@ div.one_column div.area_wrapper div.article h3
 { padding: 0 0 5px 0; font-weight: 700; border-bottom: 5px solid #ccc;}
 div.one_column div.area_wrapper h3 span.more { float: right; font-weight: normal; }
 div.one_column div.area_wrapper h3 span.more a { text-decoration: none; }
-div.one_column div.recommend div.info_wrapper { padding: 10px; }
+div.one_column div.recommend div.info_wrapper { padding: 10px 10px 0 10px; }
 div.one_column div.recommend div.info img.cover { width: 200px; height: 120px; padding: 2px; background: #fff; border: 1px solid #ccc; }
-div.one_column div.recommend div.info h4 a { font-size: 14px; color: #bf0000; text-decoration: none; font-weight: 700; }
+div.one_column div.recommend div.info h4 a { font-size: 14px; color: #BA350F; text-decoration: none; font-weight: 700; }
 div.one_column div.recommend div.info h4 a:hover { text-decoration: underline; }
 div.one_column div.recommend div.info p { color: #666; }
-div.one_column div.recommend div.exp_container { margin-top: 5px; }
+div.one_column div.recommend div.exp_container { margin-top: 3px; }
 div.one_column div.recommend div.exp_container div.exp { float: left; width: 192px; height: 14px; line-height: 14px; position: relative; color: #666; padding-top: 3px; }
 div.one_column div.recommend div.exp_container div.exp span.star { position: absolute; top: 2px; }
+
+div.body p { margin: 1em 0; }
+div.body strong { font-weight: bold; }
+div.body h1 { font-size: 2em; margin: 0.67em 0; font-weight: bold; }
+div.body h2 { font-size: 1.5em; margin: 0.83em 0; font-weight: bold; }
+div.body h3 { font-size: 1.17em; margin: 1em 0; font-weight: bold; }
+div.body h4 { margin: 1.33em 0; font-weight: bold; }
+div.body h5 { font-size: 0.83em; margin: 1.67em 0; font-weight: bold; }
+div.body h6 { font-size: 0.67em; margin: 2.33em 0; font-weight: bold; }
+div.body pre { font-family: monospace; white-space: pre; margin: 1em 0; }
+div.body address { font-style: italic; }
+div.body blockquote { margin: 1em 40px; }
+div.body sub { vertical-align: sub; font-size: smaller; }
+div.body sup { vertical-align: super; font-size: smaller; }
+div.body s, div.body strike, div.body del { text-decoration: line-through; }
+div.body i, div.body cite, div.body em, div.body var, div.address { font-style: italic; }

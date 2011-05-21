@@ -21,5 +21,5 @@ class Route < ActiveRecord::Base
     :default_url => "default/files/:style.jpg",
     :whiny => false
     
-  scope :top10, :order => "id desc", :limit => 10
+  scope :top7, :order => "id desc", :limit => 7
 end

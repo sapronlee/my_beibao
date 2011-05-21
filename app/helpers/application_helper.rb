@@ -29,6 +29,7 @@ module ApplicationHelper
     tel_string.split(',')[0]
   end
   
+  # 第一个qq
   def single_qq(qqs, number = 0)
     qq = qqs.split(',')[number]
     raw <<-QQ_HTML
@@ -38,6 +39,7 @@ module ApplicationHelper
     QQ_HTML
   end
   
+  # 第一个msn
   def single_msn(msns, number = 0)
     msn = msns.split(',')[number]
     raw <<-MSN_HTML
@@ -45,6 +47,6 @@ module ApplicationHelper
         #{image_tag('common/msn.png', :align => "absmiddle")}
       </a>
     MSN_HTML
-  end
+  end  
   
 end

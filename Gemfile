@@ -13,7 +13,7 @@ gem 'mime-types'
 gem 'dynamic_form'
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable_with_threading'
-gem 'kaminari'
+gem 'kaminari', :git => 'https://github.com/ivanyv/kaminari.git'
 gem 'ckeditor', :git => 'https://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3'
 gem 'simple_enum'
 gem 'rails-footnotes', '>= 3.7', :group => :development

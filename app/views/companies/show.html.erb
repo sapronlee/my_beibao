@@ -1,0 +1,19 @@
+<% title("#{@company.name}") %>
+<div class="article_wrapper clearfix">
+  <div class="left">
+    <div class="company clearfix">
+      <div class="box">
+        <div class="title_wrapper"><h3>企业简介</h3></div>
+        <div class="company_wrapper">
+          <div class="body"><%= raw @company.body %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <%= render "/shared/sidebar", :areas => @areas, :topics => @recent_topics, :routes => @recent_routes, :articles => @recent_articles %>
+  </div>
+</div>
+<% content_for :styles do -%>
+  <%= stylesheet_link_tag "area" %>
+<% end -%>

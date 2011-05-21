@@ -1,0 +1,12 @@
+<ul>
+  <% routes.each do |route| -%>
+    <li>
+      <div class="title_wrapper">
+        <span class="title">
+          <a href="<%= route_path(route) %>" title="<%= route.title %>"><%= truncate route.title, :length => 25 %></a>
+        </span>
+        <span class="commpany"><%= truncate route.company.name, :length => 20 %></span>
+      </div>              
+    </li>
+  <% end -%>
+</ul>

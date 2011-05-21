@@ -1,0 +1,64 @@
+<% title "#{@route.title}" %>
+<div class="route_wrapper clearfix">
+  <div class="left">
+    <div class="route clearfix">
+      <h1 class="title"><%= @route.title %></h1>
+      <div class="info clearfix">
+        <div class="cover">
+          <%= image_tag @route.cover(:small) %>
+        </div>
+        <ul>
+          <li>
+            <span class="label">组团人数：</span>
+            <span class="pcount"><%= @route.pcount %>人</span>
+          </li>
+          <li>
+            <span class="label">出发城市：</span>
+            <span class="city"><%= @route.city %></span>
+          </li>
+          <li>
+            <span class="label">组团时间：</span>
+            <span class="date"><%= @route.start_date %></span>
+          </li>
+          <li><span class="label">所属地域：</span><a href="<%= area_path(@route.area.slug) %>" title="<%= @route.area.name %>"><%= @route.area.name %></a></li>          
+        </ul>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>产品特色</h3></div>
+      <div class="routes_wrapper">
+        <div class="body"><%= raw @route.summary %></div>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>线路行程</h3></div>
+      <div class="routes_wrapper">
+        <div class="body"><%= raw @route.journey %></div>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>费用说明</h3></div>
+      <div class="routes_wrapper">
+        <div class="body"><%= raw @route.indemnify %></div>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>重要提示</h3></div>
+      <div class="routes_wrapper">
+        <div class="body"><%= raw @route.notice %></div>
+      </div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>相关线路</h3></div>
+      <div class="routes_wrapper">
+        <%= render "areas/routes", :routes => @routes %>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <%= render "/shared/sidebar", :areas => @areas, :topics => @recent_topics, :routes => @recent_routes, :articles => @recent_articles %>
+  </div>
+</div>
+<% content_for :styles do -%>
+  <%= stylesheet_link_tag "area" %>
+<% end -%>

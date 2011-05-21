@@ -14,6 +14,15 @@ class Area < ActiveRecord::Base
   validates_length_of :description, :in => 0..100
   validates_as_enum :status
   
+  has_attached_file :ad,  
+    :styles => {
+      :normal => "960>" },
+    :default_style => :normal,
+    :url => "#{APP_CONFIG["upload_url"]}/:attachment/:date_path/:style_:hash_name.:extension",
+    :path => "#{APP_CONFIG["upload_path"]}/:attachment/:date_path/:style_:hash_name.:extension",
+    :default_url => "defaults/area/ad/:style.jpg",
+    :whiny => false
+  
   
   # 按指定的顺序排序，从小到大
   scope :sort, order("number asc").where(:status_cd => Area.enabled)

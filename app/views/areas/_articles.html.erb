@@ -1,0 +1,17 @@
+<ul>
+  <% articles.each do |article| -%>
+    <li class="<%= cycle("even", "odd") %> clearfix">
+      <div class="title"><a href="<%= article_path(article) %>" title="<%= article.title %>"><%= article.title %></a></div>
+      <div class="summary"><%= truncate article.summary, :length => 140 %></div>
+      <div class="cover">
+        <a href="<%= article_path(article) %>" title="<%= article.title %>">
+          <%= image_tag article.cover(:thumb), :class => "cover", :alt => article.title %>
+        </a>
+      </div>
+      <div class="info">
+        <span class="author"><%= article.auther %></span>发布于
+        <span class="date"><%= l article.created_at, :format => :long %></span>
+      </div>
+    </li>
+  <% end -%>
+</ul>

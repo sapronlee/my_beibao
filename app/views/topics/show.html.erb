@@ -1,0 +1,39 @@
+<% title "#{@topic.title}" %>
+<div class="topic_wrapper clearfix">
+  <div class="left">
+    <div class="topic clearfix">
+      <h1 class="title"><%= @topic.title %></h1>
+      <div class="info clearfix">
+        <ul>
+          <li><span class="label">所属俱乐部：</span><%= @topic.company.name %></li>
+          <li><span class="label">所属地域：</span><a href="<%= area_path(@topic.area.slug) %>" title="<%= @topic.area.name %>"><%= @topic.area.name %></a></li>
+          <li>
+            <span class="label">推荐指数：</span>
+            <span class="star"><%= image_tag "common/star/#{@topic.rec_num}.png", :alt => "#{@topic.rec_num}星" %></span>
+          </li>
+          <li>
+            <span class="label">人气指数：</span>
+            <span class="star"><%= image_tag "common/star/#{@topic.pop_num}.png", :alt => "#{@topic.pop_num}星" %></span>
+          </li>
+          <li><span class="label">浏览数：</span><%= @topic.pv %>次</li>
+        </ul>
+        <div class="cover">
+          <%= image_tag @topic.cover(:small) %>
+        </div>
+      </div>
+      <div class="body"><%= raw @topic.body %></div>
+    </div>
+    <div class="box line10">
+      <div class="title_wrapper"><h3>相关专题</h3></div>
+      <div class="topics_wrapper">
+        <%= render "areas/topics", :topics => @topics %>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <%= render "/shared/sidebar", :areas => @areas, :topics => @recent_topics, :routes => @recent_routes, :articles => @recent_articles %>
+  </div>
+</div>
+<% content_for :styles do -%>
+  <%= stylesheet_link_tag "area" %>
+<% end -%>

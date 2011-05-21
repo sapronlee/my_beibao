@@ -27,4 +27,11 @@ class Topic < ActiveRecord::Base
     :whiny => false
     
   scope :top, order("id desc").limit(1)
+  
+  def self.random(limit = 3)
+    sqlstr = "SELECT * FROM `topics` AS t1 "
+    sqlstr += "JOIN(SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `topics`) - (SELECT MIN(id) FROM `topics`)) + (SELECT MIN(id) FROM `topics`)) AS id) AS t2 " 
+    sqlstr += "WHERE t1.id >= t2.id ORDER BY t1.id LIMIT #{limit}"    
+    self.find_by_sql(sqlstr.to_s)
+  end
 end

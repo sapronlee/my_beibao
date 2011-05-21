@@ -10,21 +10,26 @@
     <%= csrf_meta_tag %>
   </head>
   <body id="<%= "#{controller_name}_#{action_name}" %>">
-    <div class="wrapper container_16">
-      <div id="header">
-        <%= render "shared/header" %>
-      </div>
-      <div id="main" class="<%= page_column %>">
-      <% if content_for?(:left) -%>
-        <div class="column_left"><%= yield :left %></div>
-      <% end -%>
-      <div class="column_content"><%= yield %></div>
-      <% if content_for?(:right) %>
-        <div class="column_right"><%= yield :right %></div>
-      <% end -%>
-      </div>
-      <div id="footer">
-        <%= render "shared/footer" %>
+    <div id="header_top">
+      <div class="content container_16">中国背包网</div>
+    </div>
+    <div class="wrapper">
+      <div class="wrapper2 container_16">
+        <div id="header">
+          <%= render "shared/header" %>
+        </div>
+        <div id="main" class="<%= page_column %>">
+          <% if content_for?(:left) -%>
+          <div class="column_left"><%= yield :left %></div>
+          <% end -%>
+          <div class="column_content"><%= yield %></div>
+          <% if content_for?(:right) %>
+          <div class="column_right"><%= yield :right %></div>
+          <% end -%>
+        </div>
+        <div id="footer">
+          <%= render "shared/footer" %>
+        </div>
       </div>
     </div>
   </body>

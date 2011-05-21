@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516103000) do
+ActiveRecord::Schema.define(:version => 20110520135149) do
 
   create_table "admins", :force => true do |t|
     t.string   "login"
@@ -34,11 +34,15 @@ ActiveRecord::Schema.define(:version => 20110516103000) do
   create_table "areas", :force => true do |t|
     t.string   "name"
     t.string   "slug"
-    t.integer  "number",                     :default => 0
-    t.string   "description", :limit => 100
-    t.integer  "status_cd",                  :default => 0
+    t.integer  "number",                         :default => 0
+    t.string   "description",     :limit => 100
+    t.integer  "status_cd",                      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ad_file_name"
+    t.integer  "ad_file_size"
+    t.string   "ad_type_content"
+    t.datetime "ad_updated_at"
   end
 
   create_table "articles", :force => true do |t|

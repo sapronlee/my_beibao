@@ -38,7 +38,7 @@
 </div>
 <% @areas.each do |area| -%>
 <div class="area_container">
-  <div class="area_banner"><%= image_tag "ad/cz_index.jpg" %></div>
+  <div class="area_banner"><%= image_tag area.ad(:normal) %></div>
   <div class="area">
     <h2><a href="<%= area_path(area.slug) %>" title="<%= area.name %>"><%= area.name %></a></h2>
     <div class="area_wrapper clearfix">
@@ -51,7 +51,7 @@
       <div class="route">
         <h3>经典线路<span class="more"><a href="<%= area_routes_path(area.slug) %>" title="查看更多的经典线路">更多</a></span></h3>
         <ul>
-          <% area.routes.top10.each do |route| -%>
+          <% area.routes.top7.each do |route| -%>
             <%= render "index_route", :r => route %>
           <% end -%>
         </ul>
@@ -59,8 +59,8 @@
       <div class="article">
         <h3>游记攻略<span class="more"><a href="<%= area_articles_path(area.slug) %>" title="查看更多的游记攻略">更多</a></span></h3>
         <ul>
-          <% area.articles.top2.each do |article| -%>
-            <%= render "index_article", :a => article %>
+          <% area.articles.top2.each_with_index do |article, index| -%>
+            <%= render "index_article", :a => article, :i => index %>
           <% end -%>
         </ul>
       </div>
