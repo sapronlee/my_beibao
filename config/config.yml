@@ -17,4 +17,4 @@ production:
   # 配置图片的域名
   upload_url: "http://www3.chinabeibao.com/uploads"
   # 上传途径
-  upload_path: "/wwwroot/chinabeibao/uploads"
+  upload_path: "/wwwroot/chinabeibao/site/public/uploads"
