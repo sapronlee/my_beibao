@@ -15,6 +15,6 @@ test:
   
 production:  
   # 配置图片的域名
-  upload_url: "http://www.chucklee.cc/uploads"
+  upload_url: "http://www.chinabeibao.com/uploads"
   # 上传途径
-  upload_path: "/home/boli/work/ChuckLee-Blog/public/uploads"
+  upload_path: "/wwwroot/chinabeibao/uploads"
