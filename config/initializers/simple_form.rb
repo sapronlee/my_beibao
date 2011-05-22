@@ -75,4 +75,4 @@ SimpleForm.setup do |config|
   # When false, do not use translations for labels, hints or placeholders.
   # config.translate = true
 end
-SimpleForm.disable_browser_validations = true
+# SimpleForm.disable_browser_validations = true
