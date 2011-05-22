@@ -16,7 +16,7 @@ class Area < ActiveRecord::Base
   
   has_attached_file :ad,  
     :styles => {
-      :normal => "960#90" },
+      :normal => "960x90#" },
     :default_style => :normal,
     :url => "#{APP_CONFIG["upload_url"]}/:class/:attachment/:date_path/:id/:style_:hash_name.:extension",
     :path => "#{APP_CONFIG["upload_path"]}/:class/:attachment/:date_path/:id/:style_:hash_name.:extension",
