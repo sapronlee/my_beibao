@@ -1,6 +1,8 @@
 # coding : utf-8
 class Admin::AdminsController < Admin::ApplicationController
   
+  layout 'admin'
+  
   def index
     @admins = initialize_grid(Admin)
   end
