@@ -17,6 +17,6 @@ gem 'kaminari', :git => 'https://github.com/ivanyv/kaminari.git'
 gem 'ckeditor', :git => 'https://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3'
 gem 'simple_enum'
 gem 'rails-footnotes', '>= 3.7', :group => :development
-gem 'mongrel', '~> 1.2.0.pre', :group => :development
+#gem 'mongrel', '~> 1.2.0.pre', :group => :development
 
 
