@@ -33,7 +33,7 @@ production:
   encoding: utf8
   reconnect: false
   database: ChinaBeiBao_production
-  pool: 5
+  pool: 20
   username: root
-  password:
+  password: '1q2w3e4r5t6y7u8i9o0p'
   socket: /var/run/mysqld/mysqld.sock
