@@ -84,6 +84,7 @@ div.one_column div.area_wrapper div.route h3,
 div.one_column div.area_wrapper div.recommend h3,
 div.one_column div.area_wrapper div.article h3 
 { padding: 0 0 5px 0; font-weight: 700; border-bottom: 5px solid #ccc;}
+div.one_column div.area_wrapper h3 span.title { float: left; }
 div.one_column div.area_wrapper h3 span.more { float: right; font-weight: normal; }
 div.one_column div.area_wrapper h3 span.more a { text-decoration: none; }
 div.one_column div.recommend div.info_wrapper { padding: 10px 10px 0 10px; }

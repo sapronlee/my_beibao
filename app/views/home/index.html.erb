@@ -43,13 +43,19 @@
     <h2><a href="<%= area_path(area.slug) %>" title="<%= area.name %>"><%= area.name %></a></h2>
     <div class="area_wrapper clearfix">
       <div class="recommend">
-        <h3>推荐专题<span class="more"><a href="<%= area_topics_path(area.slug) %>" title="查看更多的特色专题">更多</a></span></h3>
+        <h3 class="clearfix">
+          <span class="title">推荐专题</span>
+          <span class="more"><a href="<%= area_topics_path(area.slug) %>" title="查看更多的特色专题">更多</a></span>
+        </h3>
         <% area.topics.top.each do |topic| %>
           <%= render "index_topic", :t => topic %>
         <% end -%>
       </div>
       <div class="route">
-        <h3>经典线路<span class="more"><a href="<%= area_routes_path(area.slug) %>" title="查看更多的经典线路">更多</a></span></h3>
+        <h3 class="clearfix">
+          <span class="title">经典线路</span>
+          <span class="more"><a href="<%= area_routes_path(area.slug) %>" title="查看更多的经典线路">更多</a></span>
+        </h3>
         <ul>
           <% area.routes.top7.each do |route| -%>
             <%= render "index_route", :r => route %>
@@ -57,7 +63,10 @@
         </ul>
       </div>
       <div class="article">
-        <h3>游记攻略<span class="more"><a href="<%= area_articles_path(area.slug) %>" title="查看更多的游记攻略">更多</a></span></h3>
+        <h3 class="clearfix">
+          <span class="title">游记攻略</span>
+          <span class="more"><a href="<%= area_articles_path(area.slug) %>" title="查看更多的游记攻略">更多</a></span>
+        </h3>
         <ul>
           <% area.articles.top2.each_with_index do |article, index| -%>
             <%= render "index_article", :a => article, :i => index %>
