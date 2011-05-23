@@ -18,6 +18,6 @@ gem 'ckeditor'
 gem 'simple_enum'
 gem 'rails-footnotes', '>= 3.7', :group => :development
 gem 'mongrel', '~> 1.2.0.pre', :group => :development
-gem 'rake', '0.8.7'
+gem 'rake', '0.9.0'
 
 
