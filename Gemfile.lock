@@ -110,7 +110,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   acts_as_commentable_with_threading
-  ckeditor
+  ckeditor (= 3.5.3)
   devise
   dynamic_form
   jquery-rails
