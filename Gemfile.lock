@@ -122,6 +122,7 @@ DEPENDENCIES
   rails (= 3.0.6)
   rails-footnotes (>= 3.7)
   rails-settings-cached
+  rake (= 0.8.7)
   simple_enum
   simple_form (= 1.4.0)
   wice_grid (= 3.0.0.pre4)
