@@ -14,7 +14,7 @@ gem 'dynamic_form'
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable_with_threading'
 gem 'kaminari'
-gem 'ckeditor', '3.5.0'
+gem 'ckeditor', '3.5.2'
 gem 'simple_enum'
 gem 'rails-footnotes', '>= 3.7', :group => :development
 gem 'mongrel', '~> 1.2.0.pre', :group => :development
