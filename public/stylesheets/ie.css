@@ -1,0 +1,3 @@
+div.topic div.info ul { width: 300px; }
+div.topic div.info ul li { height: 21px; }
+div.topic div.info li span.star { top: 2px; bottom: auto; }
